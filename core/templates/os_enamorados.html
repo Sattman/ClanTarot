@@ -1,0 +1,146 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Os Enamorados</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Os Enamorados</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                Os Enamorados: O Poder do Amor e da Escolha
+            </h4>
+        </div> 
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Enamorados.jpg' %}" alt="Os Enamorados" class="img-fluid">
+                <figcaption>Os Enamorados</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                Os Enamorados é a sexta carta nos Arcanos Maiores do Tarot e representa o 
+                poder do amor e da escolha em nossas vidas. Nesta carta, vemos um casal em 
+                pé diante de um anjo celestial, que parece abençoar a união deles. O casal
+                está cercado por uma paisagem exuberante, simbolizando a abundância e a
+                fertilidade que o amor traz. Essa carta representa a fase em que somos
+                confrontados com escolhas importantes em nossas vidas, especialmente em 
+                questões relacionadas ao coração. Ela nos lembra da importância de tomar
+                decisões alinhadas com nossos valores e desejos mais profundos. Os Enamorados 
+                nos desafia a explorar nossos sentimentos, intuições e conexões emocionais
+                para tomar decisões que tragam harmonia e crescimento.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta também representa a dualidade e o poder transformador do amor. O 
+                casal retratado nos Enamorados pode representar não apenas uma relação
+                romântica, mas também escolhas entre caminhos divergentes, como o amor
+                próprio versus o amor ao outro, a paixão versus a estabilidade, ou o 
+                desejo versus a responsabilidade. Em alguns aspectos, a carta dos Enamorados
+                nos relembra que o amor verdadeiro começa por nós mesmos. Antes de amar
+                outra pessoa, devemos nos amar e aceitar, reconhecendo nosso valor e
+                individualidade. Somente assim poderemos estabelecer conexões saudáveis
+                e significativas com os outros.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Além disso, essa carta nos convida a confiar em nossa intuição e escutar a
+                voz do coração ao enfrentar decisões importantes. Ela nos lembra que o amor
+                não é apenas uma emoção, mas também uma escolha consciente que molda nosso
+                destino e nos leva a novas experiências e aprendizados. Os Enamorados
+                também podem representar o desafio de superar conflitos e encontrar 
+                um equilíbrio entre forças opostas. Ao abraçarmos essa dualidade interna
+                e externa, podemos aprender a integrar nossos aspectos mais contraditórios
+                e alcançar uma maior unidade e autenticidade em nossas vidas.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Os-Enamorados.jpg' %}" alt="Os Enamorados"class="img-fluid" >
+                <figcaption>Os Enamorados</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em uma leitura de Tarot, os Enamorados podem ser um lembrete para considerarmos
+                nossas opções cuidadosamente e agir com integridade e sinceridade em nossos 
+                relacionamentos. Essa carta nos incentiva a tomar decisões alinhadas com nosso
+                verdadeiro eu e a seguir o caminho do amor e da sabedoria em nossas jornadas 
+                pessoais e espirituais.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class=" ArcanosMaiores btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Arcanos Maiores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_louco' %}">O Louco</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mago' %}">O Mago</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_sacerdotisa' %}">A Sacerdotisa</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_imperatriz' %}">A Imperatriz</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_imperador' %}">O Imperador</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_hierofante' %}">O Hierofante</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'os_enamorados' %}">Os Enamorados</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_carro' %}">O Carro</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_justica' %}">A Justiça</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_eremita' %}">O Eremita</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_roda_da_fortuna' %}">A Roda da Fortuna</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_forca' %}">A Força</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_enforcado' %}">O Enforcado</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_morte' %}">A Morte</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_temperanca' %}">A Temperança</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_diabo' %}">O Diabo</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_torre' %}">A Torre</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_estrela' %}">A Estrela</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_lua' %}">A Lua</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_sol' %}">O Sol</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_julgamento' %}">O Julgamento</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mundo' %}">O Mundo</a>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

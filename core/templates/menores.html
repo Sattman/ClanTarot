@@ -1,0 +1,224 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Arcanos Menores</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/estyle.css' %}">
+    </head>
+    <body>
+
+        <div class="ClaTarot">
+            <figure>
+              <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+            </figure>
+        </div>
+        <div class="CASA_DO_TARÔ"> 
+           <h1  class="primeiro">Arcanos Menores</h1>     
+        <ul class="lista_inicio">
+                {% for pagina in paginas %}
+                   <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <p>
+                <br>
+            </p>
+        </div>
+
+        
+    <div>
+      <h4 class="titulo">
+          Os Quatro Elementos no Tarot: Fogo, Água, Terra e Ar
+      </h4>
+  </div> 
+
+  <div class="img_elementos">
+    <figure>
+        <img src="{% static 'img/elementos.jpg' %}" alt="Os Quatro Elementos"class="img-fluid" >
+        
+    </figure>
+</div>
+
+
+<div>
+  <ul class="lista_menu" >
+      <li>
+          <div class="dropdown">
+              <button class=" btn btn-secondary dropdown-toggle" type="button" id="ÁGUA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ÁGUA
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <!-- Opções do menu ÁGUA -->
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'as_de_copas' %}">Às de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'dois_de_copas' %}">Dois de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'tres_de_copas' %}">Três de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'quatro_de_copas' %}">Quatro de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'cinco_de_copas' %}">Cinco de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'seis_de_copas' %}">Seis de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'sete_de_copas' %}">Sete de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'oito_de_copas' %}">Oito de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'nove_de_copas' %}">Nove de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'dez_de_copas' %}">Dez de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'pajem_de_copas' %}">Pajem de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'cavaleiro_de_copas' %}">Cavaleiro de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'rainha_de_copas' %}">Rainha de Copas</a>
+                  <a class="dropdown-item" href="{% url 'carta_copas' 'rei_de_copas' %}">Rei de Copas</a>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="FOGO" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  FOGO
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <!-- Opções do menu FOGO -->
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'as_de_paus' %}">Às de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'dois_de_paus' %}">Dois de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'tres_de_paus' %}">Três de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'quatro_de_paus' %}">Quatro de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'cinco_de_paus' %}">Cinco de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'seis_de_paus' %}">Seis de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'sete_de_paus' %}">Sete de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'oito_de_paus' %}">Oito de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'nove_de_paus' %}">Nove de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'dez_de_paus' %}">Dez de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'pajem_de_paus' %}">Pajem de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'cavaleiro_de_paus' %}">Cavaleiro de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'rainha_de_paus' %}">Rainha de Paus</a>
+                  <a class="dropdown-item" href="{% url 'carta_paus' 'rei_de_paus' %}">Rei de Paus</a>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="TERRA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TERRA
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <!-- Opções do menu TERRA -->
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'as_de_ouros' %}">Às de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'dois_de_ouros' %}">Dois de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'tres_de_ouros' %}">Três de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'quatro_de_ouros' %}">Quatro de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'cinco_de_ouros' %}">Cinco de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'seis_de_ouros' %}">Seis de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'sete_de_ouros' %}">Sete de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'oito_de_ouros' %}">Oito de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'nove_de_ouros' %}">Nove de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'dez_de_ouros' %}">Dez de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'pajem_de_ouros' %}">Pajem de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'cavaleiro_de_ouros' %}">Cavaleiro de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'rainha_de_ouros' %}">Rainha de Ouros</a>
+                  <a class="dropdown-item" href="{% url 'carta_ouros' 'rei_de_ouros' %}">Rei de Ouros</a>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  AR
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <!-- Opções do menu AR -->
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">Às de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                  <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+              </div>
+          </div>
+      </li>
+  </ul>         
+</div>
+
+  
+
+    <div>
+        <p>
+            <br>
+        </p>
+    </div>
+
+    <div>
+        <p class="texto1">
+            Os quatro elementos - Fogo, Água, Terra e Ar - desempenham um papel fundamental no 
+            Tarot, representando forças primordiais que influenciam nossas vidas e experiências.
+            Cada um desses elementos é associado a um dos naipes do Tarot e carrega significados
+            profundos e simbólicos que são explorados nas cartas.
+        </p>
+    </div>
+
+    <div>
+        <p class="texto1">
+            O elemento Fogo é frequentemente relacionado à paixão, energia, ação e criatividade.
+            Nas cartas do Tarot, o naipe de Paus representa o Fogo. As cartas deste naipe 
+            geralmente retratam cenas de inspiração, inovação e crescimento. O Fogo simboliza a 
+            chama interior que nos motiva a perseguir nossos objetivos, superar obstáculos e 
+            manifestar nossa vontade no mundo.
+        </p>
+    </div>
+
+
+    <div>
+        <p class="texto1">
+            A Água é um elemento que está conectado às emoções, intuição, fluidez e sensibilidade.
+            O naipe de Copas no Tarot representa a Água e é frequentemente associado a questões
+            emocionais e relacionamentos. As cartas deste naipe refletem as profundezas do nosso 
+            ser emocional, nossas conexões afetivas e a busca pela compreensão do nosso mundo
+            interior.
+        </p>
+    </div>
+
+
+
+    <div>
+        <p class="texto1">
+            O Ar é um elemento que está ligado ao intelecto, comunicação, pensamento e discernimento.
+            O naipe de Espadas no Tarot representa o Ar, e suas cartas muitas vezes abordam questões 
+            de clareza mental, desafios intelectuais e tomada de decisões. O Ar é como a brisa que 
+            traz novas ideias e perspectivas, incentivando-nos a examinar as situações sob uma luz 
+            racional.
+        </p>
+    </div>
+
+<div>
+    <p class="texto1">
+        O elemento Terra é associado à estabilidade, segurança, materialidade e realização.
+        O naipe de Ouros representa a Terra no Tarot e está relacionado a assuntos práticos,
+        finanças, trabalho e manifestação física. As cartas deste naipe destacam a
+        importância da estrutura, paciência e persistência na construção de uma base sólida
+        para alcançar nossos objetivos.
+        No Tarot, esses elementos são mais do que apenas símbolos; eles são veículos para a 
+        compreensão mais profunda do eu e do mundo que nos rodeia. Quando interpretamos as
+        cartas do Tarot, a presença desses elementos e sua interação nos oferecem insights 
+        sobre nossas experiências, desafios e oportunidades na jornada da vida. Ao compreender 
+        e equilibrar os quatro elementos dentro de nós, podemos alcançar uma maior harmonia e
+        crescimento espiritual.
+    </p>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         
+  {% bootstrap_javascript %}
+    </body>
+</html>

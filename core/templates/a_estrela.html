@@ -1,0 +1,150 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>A Estrela</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+        
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">A Estrela</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                A Estrela no Tarot: Esperança, Inspiração e Renovação Espiritual
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Estrela.jpg' %}" alt="A Estrela" class="img-fluid">
+                <figcaption>A Estrela</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                Dentro das cartas do Tarot, a figura serena e esperançosa da carta da Estrela 
+                se ergue como um farol luminoso de inspiração e renovação. Representando a 
+                conexão com a espiritualidade e a promessa de um novo amanhecer, essa carta 
+                convida-nos a olhar para além das nuvens da vida e a encontrar a beleza radiante 
+                que brilha dentro de nós. A imagem retratada na carta da Estrela frequentemente 
+                mostra uma figura feminina, geralmente nua, despejando água de duas jarras 
+                para um lago ou rio. Essa água que flui simboliza a energia vital, a conexão 
+                com o sagrado e a renovação espiritual. As estrelas no céu noturno representam 
+                a esperança e a orientação, mesmo nas horas mais escuras.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                A mensagem central da Estrela é de esperança e confiança. Ela nos lembra 
+                que, mesmo quando enfrentamos desafios, a luz da esperança nunca se apaga 
+                completamente. A Estrela nos incentiva a manter nossos corações abertos 
+                e a acreditar em nossos sonhos, independentemente das circunstâncias. Além 
+                disso, a carta da Estrela fala da conexão com algo maior do que nós mesmos. 
+                Ela nos convida a explorar nossa espiritualidade e aprofundar nossa ligação 
+                com o divino, seja qual for a forma que isso tome para cada um de nós. 
+                A Estrela nos lembra que, mesmo nos momentos mais difíceis, sempre podemos 
+                encontrar uma fonte de inspiração e orientação interior.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                A Estrela no Tarot é como um lembrete gentil de que, mesmo quando tudo parece 
+                estar obscurecido pelas nuvens da incerteza, há uma centelha de esperança a 
+                guiar-nos. Ela nos convida a olhar para o futuro com otimismo, confiar em nossa 
+                intuição e seguir em direção à luz interior que nos orienta através das 
+                adversidades. A Estrela é um farol brilhante que nos recorda da nossa capacidade 
+                de renovar nossa espiritualidade e de encontrar um propósito que nos guie nas 
+                jornadas mais obscuras da vida.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/A-Estrela.jpeg' %}" alt="A Estrela"class="img-fluid" >
+                <figcaption>A Estrela</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Ao encontrar a carta da Estrela em uma leitura de Tarot, somos convidados a 
+                lembrar que somos guiados por algo mais amplo do que nossos desafios momentâneos. 
+                Ela nos encoraja a ter fé em nós mesmos e em nosso potencial de superar obstáculos. 
+                A Estrela também nos chama a buscar conexões mais profundas com nossa espiritualidade 
+                e a confiar na sabedoria interior que guia nossa jornada. 
+                A mensagem final da Estrela é que, assim como as estrelas brilham no céu noturno, 
+                também podemos encontrar a luz da esperança, da inspiração e da renovação dentro 
+                de nós mesmos. Ela nos convida a permanecer abertos à possibilidade de milagres 
+                e a lembrar que, mesmo nas noites mais escuras, a luz sempre prevalece.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class="  ArcanosMaiores btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Arcanos Maiores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_louco' %}">O Louco</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mago' %}">O Mago</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_sacerdotisa' %}">A Sacerdotisa</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_imperatriz' %}">A Imperatriz</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_imperador' %}">O Imperador</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_hierofante' %}">O Hierofante</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'os_enamorados' %}">Os Enamorados</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_carro' %}">O Carro</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_justica' %}">A Justiça</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_eremita' %}">O Eremita</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_roda_da_fortuna' %}">A Roda da Fortuna</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_forca' %}">A Força</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_enforcado' %}">O Enforcado</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_morte' %}">A Morte</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_temperanca' %}">A Temperança</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_diabo' %}">O Diabo</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_torre' %}">A Torre</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_estrela' %}">A Estrela</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_lua' %}">A Lua</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_sol' %}">O Sol</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_julgamento' %}">O Julgamento</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mundo' %}">O Mundo</a>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

@@ -1,0 +1,147 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>O Mundo</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">O Mundo</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Mundo no Tarot: Realização, Integração e Ciclos Cumpridos
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Mundo.jpg' %}" alt="O Mundo" class="img-fluid">
+                <figcaption>O Mundo</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                Dentro das cartas do Tarot, a figura majestosa e simbólica do Mundo surge 
+                como um símbolo de realização plena, integração e a conclusão bem-sucedida 
+                de uma jornada. Representando a culminação de esforços, a compreensão 
+                profunda e a conexão com o universo em sua totalidade, essa carta nos 
+                convida a celebrar nossas conquistas e a abraçar a totalidade da experiência 
+                humana. A imagem retratada na carta do Mundo muitas vezes mostra uma figura 
+                central cercada por uma coroa de louros, dentro de um círculo que simboliza 
+                a eternidade. Os quatro símbolos dos Evangelhos (homem, leão, touro e águia) 
+                representam as quatro dimensões da experiência humana e a totalidade do 
+                universo. O Mundo nos lembra que, ao final de um ciclo, encontramos a 
+                sabedoria que advém da integração de todas as nossas experiências.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                A mensagem central do Mundo é de celebração e realização. Ela nos 
+                lembra que, após enfrentarmos desafios e passarmos por diferentes 
+                fases, alcançamos um estado de totalidade e compreensão. O Mundo 
+                nos convida a reconhecer nossas conquistas, não apenas as externas, 
+                mas também as internas, e a abraçar o nosso papel dentro do cosmos. 
+                Além disso, o Mundo fala da conexão com o universo e da realização 
+                de um ciclo completo. Ela nos lembra que, como as estações do ano, 
+                a vida é feita de ciclos que se renovam continuamente. Ao completar 
+                uma fase, abrimos espaço para uma nova etapa de crescimento e evolução.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Ao encontrar a carta do Mundo em uma leitura de Tarot, somos convidados 
+                a reconhecer e celebrar nossas realizações. Ela nos desafia a reconhecer 
+                a conexão entre todas as partes de nossa jornada e a abraçar a sabedoria 
+                que adquirimos ao longo do caminho. O Mundo também nos recorda que, 
+                mesmo enquanto comemoramos nossos sucessos, a vida continua em movimento, 
+                e novos ciclos estão prestes a começar.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/O-Mundo.jpg' %}" alt="O Mundo"class="img-fluid" >
+                <figcaption>O Mundoo</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                A mensagem final do Mundo é que, ao integrar todas as partes de nossa 
+                experiência e celebrar nossas conquistas, encontramos uma sensação de 
+                realização e unidade com o universo. Ela nos convida a continuar a 
+                jornada com gratidão, sabedoria e uma perspectiva ampla, sabendo que 
+                estamos sempre em evolução, assim como o mundo ao nosso redor.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class=" ArcanosMaiores btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Arcanos Maiores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_louco' %}">O Louco</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mago' %}">O Mago</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_sacerdotisa' %}">A Sacerdotisa</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_imperatriz' %}">A Imperatriz</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_imperador' %}">O Imperador</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_hierofante' %}">O Hierofante</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'os_enamorados' %}">Os Enamorados</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_carro' %}">O Carro</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_justica' %}">A Justiça</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_eremita' %}">O Eremita</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_roda_da_fortuna' %}">A Roda da Fortuna</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_forca' %}">A Força</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_enforcado' %}">O Enforcado</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_morte' %}">A Morte</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_temperanca' %}">A Temperança</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_diabo' %}">O Diabo</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_torre' %}">A Torre</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_estrela' %}">A Estrela</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'a_lua' %}">A Lua</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_sol' %}">O Sol</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_julgamento' %}">O Julgamento</a>
+                <a class="dropdown-item" href="{% url 'arcanos_maiores' 'o_mundo' %}">O Mundo</a>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

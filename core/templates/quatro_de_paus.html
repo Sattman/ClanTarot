@@ -1,0 +1,151 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quatro de Paus</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+       <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Quatro de Paus</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                A Celebração da Conquista: Desvendando o Quatro de Paus no Tarot
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_tres_paus1">
+            <figure>
+                <img src="{% static 'img/4_paus.jpg' %}" alt="Quatro de Paus" class="img-fluid">
+                <figcaption> Quatro de Paus</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="tres_texto1">
+                No rico e enigmático universo do Tarot, cada carta possui uma 
+                história para contar, revelando aspectos profundos da experiência 
+                humana e da jornada espiritual. O Quatro de Paus, inserido nos
+                Arcanos Menores, é uma carta repleta de alegria e celebração. 
+                Seu simbolismo nos convida a honrar as conquistas, expressar 
+                gratidão e reconhecer os momentos de harmonia e estabilidade
+                em nossa vida. Visualmente, o Quatro de Paus apresenta uma
+                imagem de comemoração e triunfo. Um cenário festivo é representado 
+                por quatro varas dispostas verticalmente, sustentando um dossel de
+                folhagens e flores. Esse arco triunfal é um símbolo tradicional 
+                de vitória e reconhecimento, e a alegria dos personagens presentes 
+                na cena é contagiante.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="tres_texto2">
+                Essa carta carrega a mensagem de que é essencial celebrar nossos marcos
+                e conquistas ao longo da jornada. Pode ser o resultado de um projeto
+                bem-sucedido, o alcance de uma meta importante ou o momento em que
+                vemos nossos esforços serem recompensados. É uma pausa para reconhecer 
+                o progresso e valorizar o caminho percorrido até o momento presente.
+                O Quatro de Paus também simboliza a criação de uma base sólida e estável
+                para o futuro. As varas que sustentam o dossel representam os alicerces 
+                sólidos que construímos em nossas vidas, seja nas áreas material,
+                emocional ou espiritual. Essa estabilidade nos oferece uma sensação 
+                de segurança e conforto, permitindo-nos enfrentar os desafios futuros
+                com mais confiança e tranquilidade.
+            </p>
+        </div>  
+        <div>
+            <p class="tres_texto3">
+                Além disso, o Quatro de Paus nos lembra da importância da comunidade e da 
+                conexão com os outros. As pessoas reunidas na imagem representam a família,
+                os amigos ou a comunidade que compartilha da alegria da celebração. Esses
+                relacionamentos são fundamentais para nossa jornada, pois nos oferecem 
+                apoio mútuo, amor e compreensão durante as diversas fases da vida. Em um
+                contexto mais espiritual, o Quatro de Paus é um lembrete para cultivarmos 
+                momentos de gratidão e contemplação. A pausa para celebrar não apenas nossas 
+                próprias vitórias, mas também as conquistas e sucessos dos outros, nos conecta
+                com a energia positiva e amorosa do universo. A gratidão sincera abre 
+                nossos corações para receber ainda mais bênçãos em nossas vidas.
+            </p>
+        </div>  
+
+<div class="img_tres_paus2">
+            <figure>
+                <img src="{% static 'img/4Paus.jpeg' %}" alt="Quatro de Paus" class="img-fluid">
+                <figcaption> Quatro de Paus</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="tres_texto4">
+                Por outro lado, o Quatro de Paus também nos incentiva a permanecer vigilantes,
+                pois a estabilidade conquistada pode ser ameaçada por desafios inesperados.
+                Devemos estar preparados para enfrentar mudanças e nos adaptar às circunstâncias
+                em constante evolução, mantendo sempre a resiliência e a determinação. Em resumo,
+                o Quatro de Paus é uma carta de celebração e reconhecimento. É um convite 
+                para honrar nossas vitórias e conquistas, bem como valorizar a estabilidade
+                e as bases sólidas que construímos em nossas vidas. Por meio da gratidão,
+                da conexão com os outros e da consciência das mudanças ao nosso redor,
+                podemos desfrutar da alegria e da harmonia presentes no momento presente 
+                e preparar-nos para um futuro ainda mais promissor.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" FOGO btn btn-secondary dropdown-toggle" type="button" id="FOGO" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FOGO
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu FOGO -->
+                <a class="dropdown-item" href="{% url 'carta_paus' 'as_de_paus' %}">Às de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dois_de_paus' %}">Dois de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'tres_de_paus' %}">Três de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'quatro_de_paus' %}">Quatro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cinco_de_paus' %}">Cinco de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'seis_de_paus' %}">Seis de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'sete_de_paus' %}">Sete de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'oito_de_paus' %}">Oito de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'nove_de_paus' %}">Nove de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dez_de_paus' %}">Dez de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'pajem_de_paus' %}">Pajem de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cavaleiro_de_paus' %}">Cavaleiro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rainha_de_paus' %}">Rainha de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rei_de_paus' %}">Rei de Paus</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

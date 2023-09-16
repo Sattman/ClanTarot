@@ -1,0 +1,140 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nove de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Nove de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Nove de Espadas no Tarot: Angústia, Preocupações e Autoconfronto
+            </h4>
+        </div> 
+        
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/9Espadas.jpg' %}" alt="Nove de Espadas" class="img-fluid">
+                <figcaption> Nove de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Nove de Espadas é uma carta do Tarot que traz consigo uma energia de angústia,
+                preocupações e autoconfronto. Representado no baralho de Rider-Waite por uma
+                figura sentada na cama, com as mãos no rosto e nove espadas penduradas na parede,
+                essa carta simboliza os tormentos mentais e as inquietações que podem nos afligir
+                durante a noite. A imagem retrata o Nove de Espadas em um estado de desespero
+                e ansiedade, refletindo a batalha interna que a pessoa está enfrentando. 
+                As nove espadas suspensas na parede representam as preocupações e pensamentos
+                negativos que parecem nos assombrar, impedindo-nos de encontrar paz mental.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa a luta contra nossos próprios demônios internos, os medos 
+                e as inseguranças que nos atormentam durante a noite. O Nove de Espadas nos
+                lembra da importância de enfrentar nossos problemas de frente e buscar ajuda
+                ou suporte quando necessário. Além disso, o Nove de Espadas também pode 
+                simbolizar a tendência de exagerarmos as preocupações e nos deixarmos consumir 
+                pelo pessimismo. Ele nos alerta para a necessidade de desenvolvermos uma
+                perspectiva mais realista e objetiva sobre nossas situações.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Nove de Espadas pode indicar um período de grande 
+                preocupação ou ansiedade em nossas vidas. Pode ser um momento em que estamos 
+                nos sentindo oprimidos pelos nossos próprios pensamentos negativos e
+                emoções perturbadoras. Essa carta também pode servir como um lembrete para
+                buscarmos ajuda ou suporte emocional se nos sentirmos sobrecarregados.
+                O Nove de Espadas nos encoraja a não enfrentarmos nossos problemas sozinhos
+                e a compartilharmos nossas preocupações com pessoas de confiança.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/9-Espadas.jpg' %}" alt="Nove de Espadas"class="img-fluid" >
+                <figcaption> Nove de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Por outro lado, o Nove de Espadas também pode nos alertar para não nos
+                prendermos ao sofrimento e à negatividade. Ele nos convida a encontrar
+                maneiras saudáveis de lidar com nossas emoções e a buscar a paz interior
+                através da autorreflexão e da autocompaixão. Em resumo, o Nove de
+                Espadas no Tarot representa a angústia, as preocupações e o autoconfronto.
+                É uma carta que nos alerta para enfrentarmos nossos demônios internos
+                e buscarmos ajuda quando necessário. Com a disposição de lidar com nossas
+                inquietações e buscar suporte emocional, podemos encontrar a clareza
+                mental e a tranquilidade emocional necessárias para superar nossos
+                desafios e seguir em frente com mais equilíbrio e serenidade.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

@@ -1,0 +1,140 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dois de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Dois de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>
+        </P>
+
+        <div>
+            <h4 class="as_titulo">
+                O Dois de Espadas no Tarot: Conflito Interno, Tomada de Decisão e Equilíbrio Mental
+            </h4>
+        </div> 
+        <p>
+            <br>
+        </P>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/2-Espadas.jpg' %}" alt="Dois de Espadas" class="img-fluid">
+                <figcaption> Dois de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Dois de Espadas é uma carta do Tarot que traz consigo uma energia de conflito
+                interno, tomada de decisão e busca pelo equilíbrio mental. Representado no baralho
+                de Rider-Waite por uma figura vendada, segurando duas espadas cruzadas em
+                posição de defesa, essa carta simboliza a luta interior e a necessidade de
+                encontrar uma resolução para dilemas e indecisões. A imagem retrata o Dois
+                de Espadas em uma posição de impasse, incapaz de ver com clareza devido
+                à venda nos olhos. As duas espadas simbolizam a dualidade das escolhas
+                e o conflito entre diferentes ideias ou opções. Essa carta nos convida
+                a enfrentar nossos próprios conflitos internos, buscando o equilíbrio
+                e a clareza mental necessários para tomar decisões importantes.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa momentos de estagnação ou bloqueio, onde podemos nos sentir
+                paralisados por indecisões ou situações conflitantes. O Dois de Espadas nos lembra
+                da importância de enfrentarmos essas questões internas e de encontrarmos uma
+                solução para seguir adiante. Além disso, o Dois de Espadas também pode indicar
+                a necessidade de dar um passo atrás e examinar as situações com mais 
+                objetividade e distanciamento emocional. Ele nos convida a usar a mente 
+                lógica e racional para entender melhor os dilemas que enfrentamos.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Dois de Espadas pode indicar um momento em que precisamos
+                tomar uma decisão difícil ou em que estamos em conflito com nós mesmos ou com
+                outras pessoas. É um momento propício para buscarmos o equilíbrio emocional 
+                e mental antes de agir impulsivamente. Essa carta também pode servir como um 
+                lembrete para a importância da comunicação aberta e honesta. O Dois de Espadas
+                nos encoraja a expressar nossos pensamentos e sentimentos de maneira clara,
+                buscando resolver mal-entendidos e conflitos através do diálogo.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/2Espadas.jpg' %}" alt="Dois de Espadas"class="img-fluid" >
+                <figcaption> Dois de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Por outro lado, o Dois de Espadas também pode nos alertar para não ignorarmos
+                nossas emoções ou intuições. Ele nos convida a considerar também o lado emocional
+                das situações e a procurar um equilíbrio entre a mente e o coração. Em resumo,
+                o Dois de Espadas no Tarot representa o conflito interno, a tomada de decisão
+                e a busca pelo equilíbrio mental. É uma carta que nos encoraja a enfrentar
+                nossos dilemas e indecisões, buscando clareza e equanimidade para tomar 
+                decisões mais acertadas. Com a disposição de encarar nossos conflitos 
+                internos, podemos encontrar a resolução necessária para seguir em frente de
+                maneira mais harmônica e segura.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class="AR btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

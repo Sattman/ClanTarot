@@ -1,0 +1,145 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dez de Ouros</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Dez de Ouros</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <div>
+            <h4 class="as_titulo">
+                O Dez de Ouros no Tarot: Realização, Segurança Familiar e Abundância
+            </h4>
+        </div> 
+        
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Dezouros.png' %}" alt="Dez de Ouros" class="img-fluid">
+                <figcaption> Dez de Ouros</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Dez de Ouros é uma carta do Tarot que traz consigo uma energia de plenitude,
+                prosperidade e estabilidade familiar. Representado no baralho de Rider-Waite
+                por uma cena de família reunida em um ambiente harmonioso, essa carta simboliza
+                a conquista de uma vida bem-sucedida e a sensação de pertencimento a um lar
+                acolhedor e seguro. A imagem retrata três gerações de uma família - avós, pais
+                e criança - comemorando juntos a prosperidade e a alegria que a vida lhes 
+                proporciona. Ao fundo, há uma mansão suntuosa, simbolizando a conquista de 
+                uma posição de destaque e a estabilidade financeira alcançada. O Dez de
+                Ouros nos lembra que a verdadeira riqueza está nas conexões familiares
+                e no ambiente harmonioso que construímos ao longo dos anos.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta também representa a sensação de segurança e conforto material. É
+                um símbolo de que alcançamos um patamar em que nossas necessidades básicas
+                estão atendidas e podemos desfrutar de uma vida mais confortável e estável.
+                Essa sensação de bem-estar nos proporciona a liberdade de focar em outras
+                áreas da vida, como o crescimento pessoal e a busca por realizações mais 
+                profundas. Além disso, o Nove de Ouros nos lembra da importância de valorizar
+                a jornada até o sucesso, não apenas o destino final. Ele representa a
+                satisfação que vem de construir um caminho sólido e apreciar cada 
+                conquista ao longo do percurso. Essa carta enfatiza que a jornada
+                para a independência e a prosperidade é tão importante quanto o objetivo final.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Essa carta representa a realização dos objetivos materiais, onde todas as 
+                necessidades financeiras são atendidas e se vive em um ambiente de conforto
+                e abundância. É um símbolo de segurança e estabilidade, onde a família se
+                torna o pilar fundamental para enfrentar os desafios da vida. Além disso,
+                o Dez de Ouros ressalta a importância de cultivar tradições familiares
+                e valores que são passados de geração em geração. Ele nos convida a honrar
+                nossas raízes e a criar um ambiente onde todos se sintam acolhidos e 
+                amados, contribuindo para a felicidade coletiva. Em leituras de Tarot,
+                o Dez de Ouros pode indicar que estamos vivenciando um período de harmonia
+                familiar e conquistas financeiras. É um momento propício para desfrutar 
+                dos frutos do trabalho árduo e compartilhar essas bênçãos com nossos 
+                entes queridos.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Dez-ouros.jpeg' %}" alt="Dez de Ouros"class="img-fluid" >
+                <figcaption> Dez de Ouros</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Essa carta também pode servir como um lembrete para valorizarmos nossas relações
+                familiares e apreciarmos os laços que nos unem. É uma oportunidade para fortalecer
+                as conexões com nossos entes queridos e para nutrir o amor e o respeito mútuo. 
+                Por outro lado, o Dez de Ouros também pode nos convidar a refletir sobre o 
+                equilíbrio entre a busca por sucesso material e a atenção às relações familiares.
+                Ele nos lembra de que a verdadeira prosperidade está na felicidade e no
+                bem-estar coletivo, não apenas na acumulação de riquezas. Em resumo, o Dez
+                de Ouros no Tarot representa a realização, segurança familiar e a sensação
+                de plenitude e abundância. É uma carta que nos convida a valorizar nossas
+                conexões familiares e a cultivar um ambiente harmonioso onde todos possam
+                prosperar e compartilhar a alegria da vida.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" TERRA btn btn-secondary dropdown-toggle" type="button" id="TERRA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TERRA
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu TERRA -->
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'as_de_ouros' %}">Às de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dois_de_ouros' %}">Dois de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'tres_de_ouros' %}">Três de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'quatro_de_ouros' %}">Quatro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cinco_de_ouros' %}">Cinco de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'seis_de_ouros' %}">Seis de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'sete_de_ouros' %}">Sete de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'oito_de_ouros' %}">Oito de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'nove_de_ouros' %}">Nove de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dez_de_ouros' %}">Dez de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'pajem_de_ouros' %}">Pajem de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cavaleiro_de_ouros' %}">Cavaleiro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rainha_de_ouros' %}">Rainha de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rei_de_ouros' %}">Rei de Ouros</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+        {% bootstrap_javascript %}
+    </body>
+</html>

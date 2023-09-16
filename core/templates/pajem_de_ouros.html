@@ -1,0 +1,141 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pajem de Ouros</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Pajem de Ouros</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Pajem de Ouros no Tarot: Novas Oportunidades e Potencial Criativo
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Pajemouros.jpg' %}" alt="Pajem de Ouros" class="img-fluid">
+                <figcaption> Pajem de Ouros</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Pajem de Ouros é uma carta do Tarot que traz consigo uma energia de novas
+                oportunidades, crescimento e potencial criativo. Representado no baralho 
+                de Rider-Waite por um jovem mensageiro segurando uma moeda de ouro, essa 
+                carta simboliza o início de um novo empreendimento ou a chegada de boas notícias
+                relacionadas a questões materiais. A imagem retrata o Pajem de Ouros com um
+                olhar curioso e determinado, pronto para embarcar em uma jornada de exploração
+                e aprendizado. Ele carrega uma moeda de ouro, que representa o potencial
+                para o crescimento financeiro e material. O Pajem de Ouros nos inspira
+                a estar abertos a novas oportunidades e a explorar nosso potencial
+                criativo em busca de prosperidade.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta também pode estar relacionada a ideia de aprendizado e aquisição de
+                novos conhecimentos. É um convite para nos tornarmos estudiosos e curiosos 
+                sobre assuntos que nos interessam, buscando o desenvolvimento pessoal e 
+                intelectual. Além disso, o Pajem de Ouros nos encoraja a sermos pacientes e
+                persistentes em nossas empreitadas. Assim como um jovem que está no início de 
+                sua jornada, é necessário tempo e esforço para que nossas ideias e projetos
+                amadureçam e se transformem em algo sólido e valioso. 
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Pajem de Ouros pode indicar a chegada de uma nova
+                oportunidade de negócio, a chance de iniciar um projeto criativo ou a abertura
+                para a aprendizagem de novas habilidades que podem trazer benefícios materiais
+                no futuro. Essa carta também pode servir como um lembrete para estarmos atentos
+                às oportunidades ao nosso redor e para estarmos dispostos a correr riscos 
+                calculados para alcançar nossos objetivos. Por outro lado, o Pajem de Ouros
+                também pode nos alertar para não nos deixarmos levar pelo impulso e para
+                evitarmos agir de forma precipitada. Ele nos convida a avaliar cuidadosamente
+                as nossas escolhas e a considerar as consequências de nossas ações.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Pajem-ouros.jpg' %}" alt="Pajem de Ouros"class="img-fluid" >
+                <figcaption> Pajem de Ouros</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Pajem de Ouros no Tarot representa o início de novas oportunidades,
+                o potencial criativo e a abertura para o crescimento material e intelectual. É
+                uma carta que nos inspira a explorar nossos talentos e a estar abertos às 
+                possibilidades que a vida nos oferece. Com a curiosidade e a determinação
+                do Pajem, podemos iniciar uma jornada repleta de aprendizado, crescimento 
+                e sucesso.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" TERRA btn btn-secondary dropdown-toggle" type="button" id="TERRA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TERRA
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu TERRA -->
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'as_de_ouros' %}">Às de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dois_de_ouros' %}">Dois de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'tres_de_ouros' %}">Três de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'quatro_de_ouros' %}">Quatro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cinco_de_ouros' %}">Cinco de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'seis_de_ouros' %}">Seis de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'sete_de_ouros' %}">Sete de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'oito_de_ouros' %}">Oito de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'nove_de_ouros' %}">Nove de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dez_de_ouros' %}">Dez de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'pajem_de_ouros' %}">Pajem de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cavaleiro_de_ouros' %}">Cavaleiro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rainha_de_ouros' %}">Rainha de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rei_de_ouros' %}">Rei de Ouros</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

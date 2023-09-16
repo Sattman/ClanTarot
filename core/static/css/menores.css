@@ -1,0 +1,145 @@
+body
+{
+    background-color: #E6E6FA;
+}
+
+.ClaTarot
+{
+  margin-left: 0%;
+  width: 9.2%;
+  height: 10%;
+  float: left;
+}
+
+.CASA_DO_TARÔ
+{
+   
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;  
+  background: linear-gradient(to right, rgb(255,255,255), rgb(255,255,255), rgb(255,255,255));
+  height: 10%;
+ 
+}
+
+.primeiro
+{
+  margin-right: 6%;
+}
+.lista_inicio
+{
+  list-style: none;
+}
+
+.lista_inicio li a, .lista_dois_paus li a
+{
+  text-transform: uppercase;
+  text-decoration: none; /* Remove sublinhado padrão dos links */
+  color: #FFFFFF; 
+  padding:  10px; /* Espaçamento interno do link (ajuste conforme necessário) */
+  font-family: "Times New Roman", Times, serif;  
+  
+}
+.as_titulo, .dois_titulo
+{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    font-weight: bold;
+}
+.as_texto1, .as_texto2, .as_texto3, .as_texto4, .dois_texto1, 
+.dois_texto2, .dois_texto3, .dois_texto4,.tres_texto1,.tres_texto2,
+.tres_texto3, .tres_texto4
+
+{
+  text-align: justify;
+  color: #000000;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin: 3%;
+  text-indent:3%;
+}
+
+.img_as_paus1, .img_dois_paus1, .img_tres_paus1
+{
+    float: right;
+  margin-right: 2%;
+  margin-top: 0.80%;
+  padding: 2%;
+}
+
+.img_as_paus2, .img_dois_paus2, .img_tres_paus2
+{
+    margin-left: 1%;
+    padding: 2%;
+   float: left;
+}
+
+figcaption
+{
+  text-align: center;
+  color: #00008B;
+}
+
+
+
+.ArcanosMaiores
+{
+  font-family: "Times New Roman", Times, serif;  
+  color: #FFFFFF;
+}
+.dropdown-menu a
+{
+  color: #4B0082;
+  font-family: "Times New Roman", Times, serif;  
+}
+.AR
+{
+  color: #FFFF00;
+  width: 99px;
+  height: 38px;
+  font-family: "Times New Roman", Times, serif;  
+}
+
+.FOGO
+{
+  color: #8B0000;
+  width: 99px;
+  height: 38px;
+  font-family: "Times New Roman", Times, serif;  
+}
+.ÁGUA
+{
+  color: #00FFFF;
+  width: 99px;
+  height: 38px;
+  font-family: "Times New Roman", Times, serif;  
+}
+
+.TERRA
+{
+  color: #00FF7F;
+  width: 99px;
+  height: 38px;
+  font-family: "Times New Roman", Times, serif;  
+}
+#oito
+{
+  margin-top: 4%;
+}
+
+@media (max-width: 1000px){
+  .imgtarot
+  {
+    margin-right: 22%;
+ 
+  }
+  #ArcanosMaiores
+  {
+    margin-left: 42%;
+  }
+  .ClaTarot
+  {
+    margin-top: 0.3%;
+  }
+
+}

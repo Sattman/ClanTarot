@@ -1,0 +1,145 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rainha de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1>Ranha de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                A Rainha de Espadas: A Soberana do Intelecto no Tarot
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/RainhaEspadas.jpg' %}" alt="Rainha de Espadas" class="img-fluid">
+                <figcaption> Rainha de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                No vasto reino do Tarot, a Corte das Espadas é habitada por figuras complexas
+                e fascinantes, cada uma trazendo consigo uma personalidade distinta e
+                simbolizando qualidades únicas. Entre elas, destaca-se a figura majestosa
+                da Rainha de Espadas, que reina com sabedoria e astúcia sobre o naipe de
+                espadas, representando a força intelectual e a capacidade de enfrentar
+                os desafios da vida com discernimento. Sentada em seu trono imponente, a
+                Rainha de Espadas emana uma aura de autoridade e serenidade. Seu olhar
+                perspicaz penetra além das aparências, desvendando os segredos ocultos
+                e as verdades mais profundas. Em suas mãos, segura a espada com habilidade,
+                mostrando que suas palavras são cortantes e diretas, capazes de desvendar
+                mistérios e desafiar a hipocrisia.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                No Tarot, o naipe de espadas está associado ao elemento ar, representando o poder
+                do pensamento, da lógica e da comunicação. Como regente dessa corte, a Rainha
+                de Espadas personifica essas qualidades, sendo uma mestra do intelecto e da
+                razão. Sua mente afiada permite que ela tome decisões sábias e justas, muitas
+                vezes deixando de lado emoções para analisar os fatos objetivamente. Porém,
+                a Rainha de Espadas também carrega a dualidade inerente a todas as cartas
+                do Tarot. Sua busca incansável pela verdade pode torná-la impiedosa e 
+                fria em suas ações. Quando desequilibrada, sua personalidade pode ser
+                dominada por um excesso de racionalidade, levando-a a ignorar as emoções
+                e a necessidade de empatia.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Ao encontrar a presença da Rainha de Espadas em uma leitura de Tarot, somos
+                convidados a refletir sobre nosso próprio relacionamento com a razão e o
+                intelecto. Ela nos desafia a enfrentar os dilemas e conflitos da vida 
+                com clareza mental e objetividade, mas também nos ensina a equilibrar 
+                essa perspectiva com a sensibilidade emocional. Essa poderosa soberana do
+                intelecto nos inspira a abraçar o conhecimento e a sabedoria, a aprimorar
+                nossas habilidades de comunicação e a enfrentar os desafios intelectuais
+                com confiança. Ao mesmo tempo, ela nos lembra da importância de não perder
+                de vista nossa humanidade, cultivando a empatia, a compaixão e o respeito
+                pelos outros e por nós mesmos.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Rainha-Espadas.jpg' %}" alt="Rainha de Espadas"class="img-fluid" >
+                <figcaption> Rainha de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, a Rainha de Espadas é um arcano que nos convida a assumir o papel de
+                líderes conscientes, usando nosso intelecto e discernimento para guiar nossas
+                escolhas e ações. Ela nos ensina que a verdadeira sabedoria está na capacidade
+                de equilibrar mente e coração, buscando a clareza mental sem abrir mão da 
+                empatia e compreensão em nossas relações com o mundo ao nosso redor.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

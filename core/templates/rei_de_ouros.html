@@ -1,0 +1,141 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rei de Ouros</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Rei de Ouros</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Rei de Ouros no Tarot: Liderança, Estabilidade e Sucesso Material
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Reiouros.jpg' %}" alt="Rei de Ouros" class="img-fluid">
+                <figcaption> Rei de Ouros</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Rei de Ouros é uma carta do Tarot que traz consigo uma energia de liderança,
+                estabilidade e sucesso material. Representado no baralho de Rider-Waite por
+                um rei majestoso sentado em seu trono, segurando uma grande moeda de ouro,
+                essa carta simboliza a capacidade de liderar e administrar com sabedoria 
+                os recursos materiais. A imagem retrata o Rei de Ouros como uma figura
+                poderosa e confiante, com roupas e coroa ornamentadas, denotando sua 
+                autoridade e riqueza. Ele é um símbolo de prosperidade conquistada através 
+                de sua habilidade em tomar decisões sólidas e prudentes em assuntos financeiros
+                e materiais.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa o domínio sobre os aspectos materiais da vida, a capacidade
+                de tomar controle das finanças e a busca pelo sucesso material e segurança
+                financeira. O Rei de Ouros nos inspira a sermos líderes responsáveis, administrando
+                nossos recursos com sabedoria e determinação. Além disso, o Rei de Ouros também
+                simboliza a generosidade e a capacidade de compartilhar a prosperidade com 
+                os outros. Ele nos lembra que o sucesso material não é apenas para o benefício
+                pessoal, mas também para apoiar e ajudar aqueles que estão ao nosso redor.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Rei de Ouros pode indicar um período de estabilidade 
+                financeira e sucesso material. É um momento propício para liderarmos com confiança,
+                tomando decisões sólidas em relação aos negócios e questões financeiras. Essa
+                carta também pode servir como um lembrete para nos concentrarmos em nossas 
+                responsabilidades e buscarmos um equilíbrio entre nossas ambições materiais
+                e nosso papel como líderes em outras áreas da vida. Por outro lado, o Rei 
+                de Ouros também pode nos alertar para não nos tornarmos excessivamente
+                materialistas ou autoritários. Ele nos convida a encontrar um equilíbrio
+                entre o sucesso material e o bem-estar emocional e espiritual, lembrando-nos
+                de que a verdadeira prosperidade inclui a harmonia em todas as áreas da vida.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Rei-ouros.jpeg' %}" alt="Rei de Ouros"class="img-fluid" >
+                <figcaption> Rei de Ouros</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Rei de Ouros no Tarot representa a liderança, estabilidade e o 
+                sucesso material. É uma carta que nos encoraja a assumirmos nosso papel como 
+                líderes responsáveis e a administrarmos com sabedoria nossos recursos para
+                alcançar prosperidade e bem-estar. Com a sabedoria e generosidade do Rei, 
+                podemos criar um ambiente de sucesso e realização em nossas vidas e também 
+                contribuir para o benefício daqueles ao nosso redor.
+            </p>
+        </div> 
+        
+        <div class="dropdown">
+            <button class=" TERRA btn btn-secondary dropdown-toggle" type="button" id="TERRA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TERRA
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu TERRA -->
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'as_de_ouros' %}">Às de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dois_de_ouros' %}">Dois de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'tres_de_ouros' %}">Três de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'quatro_de_ouros' %}">Quatro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cinco_de_ouros' %}">Cinco de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'seis_de_ouros' %}">Seis de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'sete_de_ouros' %}">Sete de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'oito_de_ouros' %}">Oito de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'nove_de_ouros' %}">Nove de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dez_de_ouros' %}">Dez de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'pajem_de_ouros' %}">Pajem de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cavaleiro_de_ouros' %}">Cavaleiro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rainha_de_ouros' %}">Rainha de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rei_de_ouros' %}">Rei de Ouros</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

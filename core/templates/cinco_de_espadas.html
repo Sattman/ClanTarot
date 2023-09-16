@@ -1,0 +1,141 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cinco de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+<body>
+
+       <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Cinco de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        
+        <p>
+            <br>
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Cinco de Espadas no Tarot: Conflito, Derrota e Estratégia Questionável
+            </h4>
+        </div> 
+        
+        <p>
+            <br>
+        </p>
+
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/5Espadas.jpg' %}" alt="Cinco de Espadas" class="img-fluid">
+                <figcaption> Cinco de Espadas</figcaption>
+            </figure>
+        </div>
+
+       
+
+        <div>
+            <p class="as_texto1">
+                O Cinco de Espadas é uma carta do Tarot que traz consigo uma energia de conflito,
+                derrota e estratégias questionáveis. Representado no baralho de Rider-Waite por 
+                uma figura carregando três espadas, enquanto outras duas são deixadas para trás
+                no chão, essa carta simboliza a vitória obtida à custa dos outros ou a sensação
+                de traição e rivalidade. A imagem retrata o Cinco de Espadas como uma cena de
+                competição e disputa. A figura carregando três espadas demonstra triunfo, 
+                mas também pode indicar a utilização de meios questionáveis para obter sucesso.
+                As duas espadas abandonadas no chão podem representar a perda de amizades ou
+                aliados devido a atitudes egoístas ou manipuladoras.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa situações de confronto ou rivalidade, onde as motivações
+                podem não ser éticas ou genuínas. O Cinco de Espadas nos alerta para a necessidade
+                de examinar nossas ações e intenções, evitando prejudicar os outros em busca de
+                vitória pessoal. Além disso, o Cinco de Espadas também pode indicar um conflito
+                interno, onde estamos divididos entre nossos desejos egoístas e nossa
+                consciência moral. Essa carta nos encoraja a refletir sobre nossos valores 
+                e a escolher um caminho mais ético e altruísta.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Cinco de Espadas pode indicar uma situação de derrota ou
+                conflito, onde podemos ter sido vítimas de traição ou rivalidade. É um momento
+                propício para avaliarmos nossas estratégias e considerarmos se estamos seguindo
+                um caminho que é verdadeiro para nós e que não prejudica os outros. Essa carta
+                também pode servir como um lembrete para buscarmos a resolução pacífica de
+                conflitos, em vez de adotarmos uma abordagem agressiva ou competitiva. Por 
+                outro lado, o Cinco de Espadas também pode nos alertar para evitarmos a
+                vitimização ou o comportamento manipulador. Ele nos convida a assumir a 
+                responsabilidade por nossas ações e a buscarmos um equilíbrio entre nossas
+                necessidades e as dos outros.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/5-Espadas.jpg' %}" alt="Cinco de Espadas"class="img-fluid" >
+                <figcaption> Cinco de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Cinco de Espadas no Tarot representa o conflito, a derrota e as
+                estratégias questionáveis. É uma carta que nos alerta para avaliarmos nossas
+                ações e intenções, buscando um caminho mais ético e respeitoso para alcançar
+                nossos objetivos. Com a disposição de sermos honestos conosco mesmos e de
+                buscar soluções pacíficas, podemos evitar conflitos prejudiciais e cultivar
+                relações mais saudáveis e harmoniosas.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

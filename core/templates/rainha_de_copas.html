@@ -1,0 +1,143 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rainha de Copas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Rainha de Copas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                A Rainha de Copas: Soberana do Reino Encantado
+            </h4>
+        </div> 
+        
+        <p>
+            <br>  
+        </p>
+
+        <div class="img_tres_paus1">
+            <figure>
+                <img src="{% static 'img/Rainhacopas.jpg' %}" alt="Rainha de Copas"class="img-fluid" >
+                <figcaption> Rainha de Copas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="tres_texto1">
+                Era uma vez, num reino mágico e encantado, uma figura majestosa que reinava com
+                imponência e determinação: a Rainha de Copas. Coroada com uma coroa resplandecente
+                de ouro, seu olhar soberano e seu sorriso enigmático atraíam a atenção de todos
+                que cruzavam seu caminho. Seu reinado era marcado por uma mescla de mistério 
+                e encanto, mas também de rigor e justiça. A Rainha de Copas era conhecida 
+                por ser uma governante implacável quando se tratava de fazer valer a lei e 
+                a ordem em seu reino. As cartas de baralho, seus símbolos de poder, estavam
+                presentes em todos os cantos do castelo real, reforçando a sua conexão com
+                o destino e a sorte.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="tres_texto2">
+                Por trás de sua personalidade autoritária, havia uma mulher com uma história 
+                fascinante. Dizem as lendas que a Rainha de Copas não nasceu no reino, mas 
+                chegou em um dia misterioso, sem memórias de seu passado. Seu caráter forte 
+                e coração generoso conquistaram o respeito e a admiração de seus súditos. 
+                Entretanto, a sua fama não se restringia apenas ao seu governo. A Rainha 
+                de Copas era conhecida também por seus suntuosos bailes e festas, que atraíam
+                visitantes de outras terras encantadas. As rosas vermelhas, suas flores 
+                favoritas, decoravam todos os salões, trazendo um ar de paixão e mistério
+                às celebrações.
+            </p>
+        </div>  
+        <div>
+            <p class="tres_texto3">
+                Apesar de sua postura distante e austera, a Rainha de Copas possuía uma essência
+                complexa. Por trás do véu de formalidade, havia uma mulher que ansiava por 
+                compreender a verdadeira origem de seu poder e de sua conexão com as cartas 
+                de copas. Alguns diziam que ela lia o futuro nos naipes das cartas e que 
+                tinha o dom de prever acontecimentos importantes. Outros acreditavam que
+                sua ligação com as cartas era uma manifestação do próprio destino, uma
+                manifestação da magia que permeava todo o reino.
+            </p>
+        </div>  
+
+<div class="img_tres_paus2">
+            <figure>
+                <img src="{% static 'img/Rainha-copas.jpg' %}" alt="Rainha de Copas"class="img-fluid" >
+                <figcaption> Rainha de Copas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="tres_texto4">
+                Seu coração estava repleto de segredos e mistérios, mas os súditos a amavam e
+                a respeitavam incondicionalmente. Eles sabiam que, apesar de sua imponência,
+                a Rainha de Copas se importava profundamente com o bem-estar de seu povo e 
+                faria tudo o que estivesse ao seu alcance para protegê-los. Assim, o reinado
+                da Rainha de Copas continuava a encantar e intrigar a todos que tinham 
+                o privilégio de conhecer sua história e testemunhar seu poder. Ela 
+                permanecia no coração de seu reino, inspirando respeito, admiração
+                e um fascínio eterno. E assim segue a história da soberana do Reino
+                Encantado, a enigmática Rainha de Copas, cujo legado perdura através
+                dos tempos, repleto de magia, mistérios e amor incondicional por seu povo.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" ÁGUA btn btn-secondary dropdown-toggle" type="button" id="ÁGUA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ÁGUA
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu ÁGUA -->
+                <a class="dropdown-item" href="{% url 'carta_copas' 'as_de_copas' %}">Às de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'dois_de_copas' %}">Dois de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'tres_de_copas' %}">Três de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'quatro_de_copas' %}">Quatro de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'cinco_de_copas' %}">Cinco de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'seis_de_copas' %}">Seis de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'sete_de_copas' %}">Sete de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'oito_de_copas' %}">Oito de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'nove_de_copas' %}">Nove de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'dez_de_copas' %}">Dez de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'pajem_de_copas' %}">Pajem de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'cavaleiro_de_copas' %}">Cavaleiro de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'rainha_de_copas' %}">Rainha de Copas</a>
+                <a class="dropdown-item" href="{% url 'carta_copas' 'rei_de_copas' %}">Rei de Copas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

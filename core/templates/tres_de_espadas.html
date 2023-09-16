@@ -1,0 +1,143 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Três de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Três de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Três de Espadas no Tarot: Dor, Desilusão e Cura Emocional
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/3Espadas.jpg' %}" alt="Três de Espadas" class="img-fluid">
+                <figcaption> Três de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Três de Espadas é uma carta do Tarot que traz consigo uma energia de dor
+                emocional, desilusão e sofrimento. Representado no baralho de Rider-Waite por
+                três espadas atravessando um coração, essa carta simboliza a tristeza resultante
+                de experiências dolorosas, decepções ou perdas emocionais. A imagem retrata o 
+                Três de Espadas como uma representação visual do coração partido, onde as
+                três espadas perfuram o centro do coração. Essa carta nos lembra da natureza
+                inevitável do sofrimento humano e das feridas emocionais que podem 
+                surgir em nossas vidas.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa momentos de angústia e tristeza profunda, onde podemos nos 
+                sentir devastados pelas circunstâncias ou pelas ações de outras pessoas. O Três
+                de Espadas nos convida a enfrentar a dor emocional, permitindo-nos passar pelo
+                processo de cura e de lidar com nossos sentimentos. Além disso, o Três de
+                Espadas também pode representar a necessidade de enfrentar verdades difíceis
+                ou situações desafiadoras que podem ser dolorosas, mas que são essenciais
+                para o crescimento e para encontrar a verdadeira cura emocional. Em leituras
+                de Tarot, o Três de Espadas pode indicar um momento de crise emocional,
+                onde nos sentimos abalados por uma perda, decepção ou traição. É um momento
+                propício para buscarmos apoio emocional e para expressarmos nossos 
+                sentimentos de maneira saudável.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Essa carta também pode servir como um lembrete para permitirmos a nós mesmos
+                vivenciar e processar nossas emoções, sem reprimi-las ou ignorá-las. O Três
+                de Espadas nos encoraja a enfrentar o sofrimento de frente, permitindo-nos
+                encontrar a cura e a superar a dor. Por outro lado, o Três de Espadas
+                também pode nos alertar para não nos fecharmos emocionalmente ou evitarmos
+                enfrentar nossas emoções. Ele nos convida a buscar suporte, seja através
+                de amigos, familiares ou profissionais de saúde mental, para lidar com
+                nossos sentimentos de maneira construtiva.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/3-Espadas.jpg' %}" alt="Três de Espadas"class="img-fluid" >
+                <figcaption> Três de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Três de Espadas no Tarot representa a dor emocional, a desilusão e
+                a necessidade de enfrentarmos nossas feridas emocionais para encontrar a cura.
+                É uma carta que nos encoraja a permitir-nos vivenciar nossas emoções de maneira 
+                autêntica e a buscar apoio para lidar com nossos sentimentos de forma saudável.
+                Com a disposição de enfrentar nossos momentos de crise e tristeza, podemos
+                encontrar a cura e o crescimento emocional necessários para seguir em frente
+                com mais força e compreensão.
+            </p>
+        </div>
+         
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

@@ -1,0 +1,135 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dois de Ouros</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Dois de  Ouros</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>
+        </P>
+
+        <div>
+            <h4 class="as_titulo">
+                O Dois de Ouros: Equilíbrio e Adaptabilidade
+            </h4>
+        </div> 
+        <p>
+            <br>
+        </P>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/Doisouros.jpg' %}" alt="Dois de Ouros" class="img-fluid">
+                <figcaption> Dois de Ouros</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                No baralho do Reino Encantado, o Dois de Ouros é uma carta que representa a
+                busca constante pelo equilíbrio e a necessidade de adaptação diante das
+                mudanças da vida. Em seu desenho, o Dois de Ouros apresenta um jovem malabarista
+                que equilibra duas moedas no ar, demonstrando sua habilidade em lidar com 
+                diferentes aspectos da vida. As moedas estão em movimento contínuo, simbolizando 
+                a fluidez e a dinâmica das situações que se apresentam ao longo do caminho. 
+                Essa carta traz consigo uma mensagem de que a vida é um eterno equilíbrio
+                entre várias áreas: trabalho e lazer, responsabilidade e liberdade, deveres 
+                e desejos. O Dois de Ouros lembra aos súditos do Reino Encantado que é
+                necessário encontrar um ponto de harmonia para lidar com as demandas do
+                cotidiano sem se desgastar em excesso.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                A capacidade de adaptação também é uma lição valiosa que o Dois de Ouros oferece.
+                Assim como o malabarista ajusta suas mãos para manter as moedas em equilíbrio, é
+                fundamental aprender a se adaptar às mudanças que a vida traz, abraçando novas
+                circunstâncias com flexibilidade e confiança. No Reino Encantado, o Dois de Ouros 
+                é frequentemente associado ao trabalho árduo e à gestão financeira. Ele lembra
+                que é importante manter um olhar atento sobre as finanças, encontrando maneiras
+                de administrar recursos de forma eficiente e prática. Essa carta sugere que 
+                é um bom momento para investir sabiamente e estar preparado para lidar com 
+                desafios financeiros com criatividade e inteligência.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Além disso, o Dois de Ouros traz a mensagem de que a vida é uma dança constante 
+                entre os altos e baixos, e que a aceitação dessa dualidade é fundamental para o 
+                crescimento pessoal e espiritual. Quando se aprende a dançar com as oscilações
+                da vida, é possível encontrar uma verdadeira sensação de harmonia e paz interior.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Dois-ouros.jpg' %}" alt="Dois de Ouros"class="img-fluid" >
+                <figcaption> Dois de Ouros</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em suma, o Dois de Ouros é uma carta que nos lembra da importância do equilíbrio
+                e da capacidade de adaptação em nossas vidas. Ele oferece um lembrete para abraçar
+                as mudanças, manter a flexibilidade e encontrar a dança graciosa entre as diversas
+                facetas da existência no mágico Reino Encantado.
+            </p>
+        </div> 
+        <div class="dropdown">
+            <button class=" TERRA btn btn-secondary dropdown-toggle" type="button" id="TERRA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TERRA
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu TERRA -->
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'as_de_ouros' %}">Às de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dois_de_ouros' %}">Dois de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'tres_de_ouros' %}">Três de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'quatro_de_ouros' %}">Quatro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cinco_de_ouros' %}">Cinco de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'seis_de_ouros' %}">Seis de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'sete_de_ouros' %}">Sete de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'oito_de_ouros' %}">Oito de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'nove_de_ouros' %}">Nove de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'dez_de_ouros' %}">Dez de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'pajem_de_ouros' %}">Pajem de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'cavaleiro_de_ouros' %}">Cavaleiro de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rainha_de_ouros' %}">Rainha de Ouros</a>
+                <a class="dropdown-item" href="{% url 'carta_ouros' 'rei_de_ouros' %}">Rei de Ouros</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

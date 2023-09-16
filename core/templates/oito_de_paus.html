@@ -1,0 +1,150 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Oito de Paus</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Oito de Paus</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                Oito de Paus - A Velocidade do Destino
+            </h4>
+        </div> 
+        
+        <p>
+            <br>  
+        </p>
+
+        <div class="img_tres_paus1">
+            <figure>
+                <img src="{% static 'img/8_paus.jpg' %}" alt="Oito de Paus"class="img-fluid" >
+                <figcaption> Oito de Paus</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="tres_texto1">
+                O Oito de Paus é uma carta significativa e repleta de energia, representando a 
+                velocidade do destino em ação. No tarot, essa carta é retratada por oito bastões 
+                voando rapidamente pelo céu, indicando que os eventos estão se desenrolando em 
+                uma velocidade acelerada. Esse arcano menor simboliza ação, progresso, movimento
+                e transformação rápida.  Quando o Oito de Paus aparece em uma leitura de tarot,
+                ele traz consigo uma sensação de urgência e mudanças iminentes. Pode indicar a 
+                chegada repentina de notícias, eventos ou oportunidades que irão exigir uma 
+                resposta rápida da pessoa em questão. É como se o Universo estivesse lançando 
+                situações desafiadoras ou novidades empolgantes para testar a capacidade de
+                adaptação e agilidade do indivíduo.
+
+
+
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="tres_texto2">
+                Essa carta também sugere que bloqueios ou obstáculos que antes pareciam
+                intransponíveis estão agora sendo superados com facilidade. As circunstâncias 
+                estão se desdobrando rapidamente, permitindo que antigos problemas sejam
+                resolvidos de maneira eficiente. É como se as barreiras estivessem sendo 
+                derrubadas, abrindo caminho para a realização de objetivos e o progresso 
+                desejado. No âmbito emocional, o Oito de Paus pode indicar o surgimento 
+                repentino de paixões ou o avanço rápido em relacionamentos. Pode ser um
+                período de intensidade e romance acelerado, onde o coração é inundado 
+                com emoções avassaladoras.
+            </p>
+        </div>  
+        <div>
+            <p class="tres_texto3">
+                Contudo, é importante lembrar que essa rápida sucessão de eventos também pode 
+                ser um desafio para manter o equilíbrio. A pessoa pode se sentir sobrecarregada
+                pelo ritmo acelerado da vida e, por isso, é essencial manter a calma e a clareza
+                mental para tomar decisões acertadas. Em resumo, o Oito de Paus é uma carta de
+                movimento rápido, mudança e progresso. Ele incentiva a estar preparado para
+                agir com rapidez e aproveitar as oportunidades que surgem em nosso caminho. 
+                Através dessa energia dinâmica, somos lembrados de que o destino muitas vezes
+                se desenrola em velocidade impressionante, e é nosso papel abraçar essas
+                transformações com determinação e coragem, sabendo que cada passo rápido
+                nos aproxima mais de nossos objetivos.
+            </p>
+        </div>  
+
+<div class="img_tres_paus2">
+            <figure>
+                <img src="{% static 'img/8paus.png' %}" alt="Oito de Paus"class="img-fluid" >
+                <figcaption> Oito de Paus</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="tres_texto4">
+                No final, essa carta nos encoraja a seguir em frente com coragem e determinação,
+                enfrentando os desafios de frente e confiando em nossa capacidade de superá-los.
+                Cada passo dado com ousadia nos aproxima mais dos nossos objetivos e nos permite
+                crescer e evoluir ao longo do caminho. Assim, ao enfrentarmos a velocidade do 
+                destino com confiança e resiliência, estamos abrindo as portas para um futuro
+                repleto de oportunidades e realizações. Que o Oito de Paus nos inspire a abraçar
+                essa jornada com alegria e determinação, pois é no turbilhão das mudanças
+                rápidas que encontramos nosso verdadeiro potencial e nos tornamos co-criadores
+                do nosso destino.
+            </p>
+        </div> 
+        
+        <div class="dropdown">
+            <button class=" FOGO btn btn-secondary dropdown-toggle" type="button" id="FOGO" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FOGO
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu FOGO -->
+                <a class="dropdown-item" href="{% url 'carta_paus' 'as_de_paus' %}">Às de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dois_de_paus' %}">Dois de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'tres_de_paus' %}">Três de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'quatro_de_paus' %}">Quatro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cinco_de_paus' %}">Cinco de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'seis_de_paus' %}">Seis de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'sete_de_paus' %}">Sete de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'oito_de_paus' %}">Oito de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'nove_de_paus' %}">Nove de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dez_de_paus' %}">Dez de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'pajem_de_paus' %}">Pajem de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cavaleiro_de_paus' %}">Cavaleiro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rainha_de_paus' %}">Rainha de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rei_de_paus' %}">Rei de Paus</a>
+            </div>
+        </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+        {% bootstrap_javascript %}
+    </body>
+</html>

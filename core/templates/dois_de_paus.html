@@ -1,0 +1,159 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dois de Paus</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1 class="primeiro">Dois de Paus</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>
+        </P>
+
+        <div>
+            <h4 class="dois_titulo">
+                O Poder da Dualidade: Desvendando os Mistérios do Dois de Paus no Tarot
+            </h4>
+        </div> 
+        
+        <p>
+            <br>
+        </P>
+        
+        <div class="img_dois_paus1">
+            <figure>
+                <img src="{% static 'img/paus-dois.jpg' %}" alt="Dois de Paus"class="img-fluid" >
+                <figcaption> Dois de Paus</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="dois_texto1">
+                O Dois de Paus é uma carta profundamente simbólica do Tarot, repleta de
+                significados e mensagens intrigantes. Como parte da família dos Arcanos 
+                Menores, esta carta carrega consigo a essência do elemento Fogo, refletindo 
+                o poder da ação, da paixão e da energia criativa. Ao analisar a representação
+                visual do Dois de Paus, podemos vislumbrar um indivíduo segurando duas hastes 
+                em suas mãos, contemplando o mundo diante de si.
+                Essa imagem evoca a ideia de um momento crucial na jornada do autoconhecimento e 
+                da tomada de decisões. O sujeito retratado está diante de um horizonte vasto e 
+                desconhecido, símbolo das inúmeras possibilidades e oportunidades que o aguardam.
+                As duas hastes em suas mãos representam a dualidade, as escolhas que se apresentam 
+                e a necessidade de tomar uma direção clara em sua trajetória.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="dois_texto2">
+                O Dois de Paus é, portanto, um convite à reflexão e à ponderação sobre as metas e ambições
+                pessoais. É uma carta que nos convida a avaliar o progresso feito até agora e a considerar 
+                o que é realmente importante para alcançar nossos objetivos futuros. A posição das hastes 
+                nas mãos do indivíduo sugere que ele detém o controle e a capacidade de influenciar os 
+                acontecimentos ao seu redor.
+                Em um nível mais profundo, essa carta também pode representar a necessidade de parceria e colaboração.
+                O indivíduo na imagem pode estar considerando a ideia de se unir a outra pessoa ou grupo para expandir
+                sua visão e alcançar novos horizontes. A sinergia de habilidades e perspectivas distintas pode ser
+                o impulso necessário para o crescimento e o desenvolvimento pessoal.
+            </p>
+        </div>  
+        <div>
+            <p class="dois_texto3">
+                O Dois de Paus também carrega consigo um lembrete para que não nos deixemos aprisionar pelo medo ou
+                pela insegurança. É natural sentir-se apreensivo diante do desconhecido, mas a coragem de enfrentar
+                o desafio e sair da zona de conforto é o que impulsiona o indivíduo rumo ao sucesso e à realização.
+                No entanto, é fundamental equilibrar essa ousadia com a sabedoria. A haste em chamas na carta simboliza a necessidade
+                de canalizar a energia de forma positiva e construtiva. Em vez de agir impulsivamente, o Dois de Paus nos convida 
+                a planejar e avaliar as consequências de nossas ações, garantindo que nossas escolhas se alinhem com nossa visão mais 
+                elevada.
+            </p>
+        </div>  
+
+<div class="img_dois_paus2">
+            <figure>
+                <img src="{% static 'img/dois-de-paus.jpg' %}" alt="Doiss de Paus"class="img-fluid" >
+                <figcaption> As de Paus</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="dois_texto4">
+                No âmbito espiritual, o Dois de Paus pode ser interpretado como 
+                um convite para explorar e fortalecer a conexão com nossa própria
+                essência. É uma oportunidade para alinhar nossas paixões e propósitos
+                internos com nossas ações no mundo externo.Em suma, o Dois de Paus
+                é uma carta que nos convida a abraçar a jornada da autodescoberta,
+                a abraçar a dualidade presente em nossas vidas, a fazer escolhas 
+                conscientes e a abraçar o poder criativo que reside em cada um de 
+                nós. Por meio da confiança em nossa capacidade de influenciar e moldar 
+                nosso destino, podemos enfrentar o futuro com coragem e determinação, 
+                sabendo que somos os protagonistas de nossa própria história.
+
+            </p>
+        </div> 
+        <div>
+            <p class="dois_texto4">
+                Em última análise, o Dois de Paus é uma carta que nos convida a 
+                abraçar a responsabilidade de criar o nosso destino. Por meio da
+                consciência das escolhas que fazemos e da compreensão de nossas 
+                paixões mais genuínas, podemos trilhar o caminho que nos leva a 
+                um futuro mais gratificante e significativo. Com coragem, sabedoria 
+                e a disposição de abraçar a dualidade da vida, somos capazes de
+                enfrentar os desafios com confiança e determinação, navegando
+                com ousadia por entre os horizontes que se abrem diante de nós.
+                
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class="FOGO btn btn-secondary dropdown-toggle" type="button" id="FOGO" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FOGO
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu FOGO -->
+                <a class="dropdown-item" href="{% url 'carta_paus' 'as_de_paus' %}">Às de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dois_de_paus' %}">Dois de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'tres_de_paus' %}">Três de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'quatro_de_paus' %}">Quatro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cinco_de_paus' %}">Cinco de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'seis_de_paus' %}">Seis de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'sete_de_paus' %}">Sete de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'oito_de_paus' %}">Oito de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'nove_de_paus' %}">Nove de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dez_de_paus' %}">Dez de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'pajem_de_paus' %}">Pajem de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cavaleiro_de_paus' %}">Cavaleiro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rainha_de_paus' %}">Rainha de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rei_de_paus' %}">Rei de Paus</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

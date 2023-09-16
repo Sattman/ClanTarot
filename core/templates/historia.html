@@ -1,0 +1,179 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <title>História do Tarot</title>
+        {% bootstrap_css %}
+        <meta name="description" content="">        
+        <link rel="stylesheet" href="{% static 'css/estyle.css' %}">
+    </head>
+    <body>
+
+    <header>
+        <div class="ClaTarot">
+            <figure>
+              <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+            </figure>
+        </div>
+        <div class="CASA_DO_TARÔ"> 
+           <h1 class="primeiro">História do Tarot</h1>     
+        <ul class="lista_inicio">
+                {% for pagina in paginas %}
+                   <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                {% endfor %}
+            </ul>
+        </div>
+    </header>
+
+    <p>
+        <br>
+    </p>
+    
+    <div class="img_museu1">
+        <figure class="imagem-flutuante">
+            <img src="{% static 'img/Museu Fournier.jpg' %}" alt="Museu Fournier" class="img-fluid">
+            <figcaption> Museu Fournier </figcaption>
+        </figure>
+    </div>
+
+<div class="texto1">
+    <p>
+        Apesar do empenho dos estudiosos e da boa literatura existente sobre o assunto, a
+        origem do tarô permanece na obscuridade. As civilizações egípcia, chinesa, indiana e
+        hebraica, entre outras, foram indicadas como as que teriam, em tempos remotos,
+        concebido o tarô como um legado divino. Há os que situam sua invenção na Europa
+        medieval, com o intuito de servir de diversão à corte real, e outros que o conceituam
+        como uma nova arte de expressão. Teorias e crenças à parte, ninguém sabe ao certo de
+        onde veio ou, exatamente, o porquê de sua invenção. Um fato inquestionável é que os
+        mais antigos tarôs e documentos referentes a esse jogo datam do final do século XIV.
+        Não há nenhum registro, pintura, literatura ou qualquer coisa que se assemelhe ao tarô,
+        ou a jogos de carta em geral, muito anterior à época da Renascença.
+    </p>
+</div>
+
+ <div class="texto2">
+    <p>
+        Atualmente existem dois museus exclusivos sobre o tarô, com um acervo de mais de
+        25 mil tipos de cartas e documentos: Museu Fournier (Vitoria-Gasteiz, Alava, Espanha) e
+        o Museu da Cidade (Marselha, França); também encontramos documentos e uma coleção
+        variada de tarôs nos principais museus do mundo: Louvre (Paris, França), Metropolitano
+        (Nova York, EUA), Britânico (Londres, Inglaterra), entre outros; ou em importantes
+        bibliotecas, tais como a Nacional da França (Paris) e a Pierpont Morgan (Nova York).
+        Fazendo um pequeno resumo da história registrada do tarô observaremos uma
+        evolução, tanto no aspecto simbólico quanto no literário. As cartas dos primeiros tarôs de
+        que se tem notícia não continham nome, numeração nem o quantitativo como
+        conhecemos atualmente, somente sua expressão simbólica, tal como o tarô de Visconti-Sforza produzido por volta de 1440, em Milão, na Itália. Entre 1500 e 1650 começaram a
+        surgir nas cartas de alguns tarôs a nominação, como no tarô de Catlin Geofroy, ou só a numeração, como no tarô de Jacques Vieville. Alguns tarôs da Renascença continham 97
+        cartas, como o tarô de Minchiate; outros, 50, como o tarô de Mantegna; ou 37, como as
+        cartas de Sola Busca. Por volta de 1690 os tarôs, em toda a Europa, obtiveram a
+        formação definitiva de 78 cartas que conhecemos, similar à do tarô de Marselha —
+        também não existem registros ou um consenso de como ou por que se chegou a essa
+        estrutura. Os jogos de tarô permaneceram isolados no continente europeu desde a
+        presumida origem entre 1369-97 até por volta de 1870. Sua chegada aos Estados Unidos
+        ocorreu entre 1870 e 1920 e aos demais países da América do Sul, entre 1930 e 1980. 
+    </p>
+</div>    
+
+    <div class="img_museu2">
+        <figure>
+            <img src="{% static 'img/museu.jpg' %}" alt="Museu Fournier" class="img-fluid">
+            <figcaption> Museu Fournier </figcaption>
+        </figure>
+    </div>
+
+<div class="texto3">
+    <p>
+        Resumindo: entre o final do século XIV até meados do século XVII o número de
+        cartas do tarô variou de 37 a 97. A partir do final do século XVII o tarô passou a
+        conter 78 cartas, com numeração e nominação específicas. Durante
+        aproximadamente quinhentos anos esteve nos países da Europa continental,
+        chegou à América do Norte no final do século XIX e à América do Sul em meados
+        do século XX.
+    </p>
+</div>
+
+<div class="texto4">
+    <p>
+        Outro dado histórico interessante é que as cartas não se chamavam tarot, tampouco
+        cada unidade era denominada arcano. Vejamos: nos primeiros registros históricos sobre o
+        tarô, no final do século XIV, o tarô se chamava ludus cartarum; por volta de 1400 até
+        1450 foi denominado naibis e, num período que compreende entre 1450 e 1590, foi
+        classificado de tarocco ou tarochino. Foi precisamente em 1592, na fundação de uma
+        associação de artesãos franceses, que a palavra tarot surgiu. Contudo, a região da Itália
+        continuou utilizando o termo tarocco, enquanto a França e demais países, na mesma
+        época, usavam a designação tarot — ninguém sabe ou conhece a etimologia dessa
+        palavra, que é tida como a “estrada da vida” por alguns, mas trata-se de um termo
+        genérico e coloquial. Cada país escreve a palavra de acordo com sua regra ortográfica;
+        assim, na Itália, é tarocco; no Leste Europeu, taroc ou tapo; nos países germânicos, tarok
+        ou tarot; nos países de língua inglesa, francesa e espanhola, tarot, e no Brasil, tarô. Cada
+        carta, entre o final do século XIV e 1450, era chamada de naibis; por volta de 1450 a
+        1850, de trunfo; somente entre 1850 e 1900 surge a palavra arcano.
+    </p>
+</div>
+<div class="img_museu3">
+    <figure>
+        <img src="{% static 'img/arcanos.jpg' %}" alt="Tarot Visconti-Sforza" class="img-fluid">
+        <figcaption> Tarot Visconti-Sforza </figcaption>
+    </figure>
+</div>
+
+
+<div class="texto5">
+    <p>
+        Quanto à sua literatura propriamente dita, registros nos mostram que por muitos
+        séculos o tarô foi utilizado, simultaneamente, tanto de forma lúdica quanto espiritual. É
+        importante observar esse aspecto, pois na Europa ainda se utilizam as cartas do tarô
+        para torneios de jogatina. Por isso, em francês, para se definir a forma de utilização das
+        cartas, se diz: tarot a jouer (tarô para brincar, jogar) ou tarot divinatoir (tarô para
+        adivinhar, ler). O mesmo acontece nos Estados Unidos, onde se diz: cards to play (cartas
+        para brincar, jogar) ou cards to read (cartas para adivinhar, ler). Em toda a América do
+        Sul e Central, onde não há a cultura de “brincar” com o tarô, algo parecido com o famoso
+        jogo do buraco, não se faz essa distinção, pois é tido como algo intocável e sacralizado.
+        Contudo, tanto na Europa quanto nos Estados Unidos, quem faz uso da jogatina não
+        utiliza o oráculo e vice-versa. É tudo uma questão de crença e cultura.
+    </p>
+</div>
+
+
+<div class="texto6">
+    <p>
+            Por esse aspecto confuso (lúdico-adivinhatório) de sua utilização nos séculos
+            anteriores, o tarô não foi muito bem aceito pelos esotéricos; praticamente, não temos
+            nenhuma obra de ocultistas renomados até o final do século XVIII se reportando ao tarô,
+            ao contrário do que ocorre com qualquer outra área mística. Foi com os livros de Antoine
+            Court de Gebelin (1775), Etteilla (1783), Eliphas Lévi (1854), MacGregor Mathers (1888),
+            Papus (1889) e Arthur Edward Waite (1910), um se baseando no outro, que o tarô entrou
+            definitivamente no círculo esotérico. Em qualquer história anterior a esses verdadeiros
+            patronos do tarô encontramos apenas conjecturas insólitas que se perdem no devaneio
+            místico. Um fato curioso: somente os homens podiam ilustrar e produzir as cartas de
+            tarô, as quais só utilizavam em sua forma lúdica, enquanto as mulheres as jogavam
+            também em sua forma oracular. Podemos assegurar que o tarô adivinhatório (oráculo,
+            espiritualidade) era essencialmente uma arte feminina e, talvez, por estar inserido em
+            uma sociedade misógina, os ocultistas tenham se recusado a estudar sua rica simbologia.
+            O primeiro homem a jogar o tarô em sua forma oracular foi o parisiense Etteilla, por volta
+            de 1780, e Pamela Smith, a primeira mulher a desenhar um tarô (Rider-Waite), em 1910.
+            Da mesma forma, não existe literatura do gênero ocultista escrita por mãos femininas
+            antes do final do século XIX.
+
+    </p>
+</div>
+
+<div class="texto7">
+    <p>
+        Resumindo: desde seu aparecimento na Europa, no final do século XIV, até o final
+        do século XVIII, as cartas eram vistas de forma lúdica e mística; nenhum ocultista
+        deu importância ao significado simbólico e oracular até 1775. Somente a partir do
+        século XIX o tarô começou, definitivamente, a ser estudado pelos grandes
+        ocultistas e, no século XX, por todos os esotéricos e exotéricos.
+
+        <p>De acordo com o livro <cite style="font-style: italic; color: blue;">Curso Completo de Tarô</cite> de Nei Naiff, 10ª edição, da Editora Nova Era...</p>
+
+    </p>
+</div>
+
+        {% bootstrap_javascript %}
+    </body>
+</html>

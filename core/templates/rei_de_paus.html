@@ -1,0 +1,140 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rei de Paus</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Rei de Paus</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Líder Ardente: Descobrindo a Sabedoria do Rei de Paus no Tarot
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_tres_paus1">
+            <figure>
+                <img src="{% static 'img/rei-paus.jpg' %}" alt="Rei de Paus"class="img-fluid" >
+                <figcaption> Rei de Paus</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="tres_texto1">
+            O Rei de Paus, uma figura poderosa e carismática, reina soberano sobre o
+            mundo das cartas do Tarot. Com sua postura confiante e olhar penetrante,
+            ele é o líder supremo, governando com paixão e determinação. Vestido com roupas
+            reais adornadas com símbolos de fogo e energia, o Rei de Paus personifica 
+            a força ardente do elemento fogo, representando ação, entusiasmo e criatividade.
+            Ele é um visionário, um inovador que transforma ideias em realidade com seu
+            espírito empreendedor e mente estratégica. Este rei é um líder inspirador,
+            capaz de motivar e unir pessoas em torno de uma causa comum. Seu magnetismo
+            e habilidade de comunicação o tornam cativante, e ele usa essa influência
+            para guiar seu reino rumo ao sucesso e à prosperidade.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="tres_texto2">
+            Assim como o fogo que queima vigorosamente, o Rei de Paus é apaixonado em seus
+            empreendimentos. Ele é apaixonado por suas convicções e não tem medo de
+            enfrentar desafios. Sua determinação inabalável faz com que ele seja
+            imparável em seus esforços, e ele não recua diante das adversidades que possam 
+            surgir. Apesar de ser conhecido por sua natureza entusiasta e audaciosa, o Rei
+            de Paus também possui uma sabedoria interior. Ele entende que a paciência e a
+            reflexão são essenciais para o sucesso a longo prazo, e sua abordagem
+            equilibrada para a liderança o torna respeitado por aqueles ao seu redor.
+            </p>
+        </div>  
+        <div>
+            <p class="tres_texto3">
+                Como figura paterna, o Rei de Paus protege e orienta sua família e comunidade.
+                Ele é leal e justo, agindo com integridade e mantendo sua palavra. Seu caráter 
+                nobre e benevolente inspira confiança e devoção em seus súditos. No entanto, 
+                esse rei também carrega o fardo de responsabilidade. Ele pode sentir o peso
+                do mundo sobre seus ombros, mas enfrenta esse ônus com coragem e bravura.
+                Sua determinação em proteger e melhorar a vida de sua gente é inabalável.
+            </p>
+        </div>  
+
+<div class="img_tres_paus2">
+            <figure>
+                <img src="{% static 'img/reipaus.jpg' %}" alt="Rei de Paus" class="img-fluid" >
+                <figcaption> Rei de Paus</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="tres_texto4">
+                Quando o Rei de Paus aparece em uma leitura de Tarot, ele traz consigo uma mensagem
+                de liderança, paixão e confiança. Ele nos incentiva a abraçar nossa própria força 
+                interior e acreditar em nosso potencial de liderança. Sua presença nos lembra 
+                que somos capazes de manifestar nossas visões e objetivos com entusiasmo e assertividade.
+                Que possamos aprender com o Rei de Paus a governar nossas vidas com sabedoria e determinação, a sermos
+                apaixonados em nossas buscas e a liderar com integridade e compaixão. Que sua energia inflame nossa 
+                criatividade e nos inspire a assumir o comando de nossos destinos com coragem e confiança.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" FOGO btn btn-secondary dropdown-toggle" type="button" id="FOGO" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FOGO
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu FOGO -->
+                <a class="dropdown-item" href="{% url 'carta_paus' 'as_de_paus' %}">Às de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dois_de_paus' %}">Dois de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'tres_de_paus' %}">Três de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'quatro_de_paus' %}">Quatro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cinco_de_paus' %}">Cinco de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'seis_de_paus' %}">Seis de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'sete_de_paus' %}">Sete de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'oito_de_paus' %}">Oito de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'nove_de_paus' %}">Nove de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'dez_de_paus' %}">Dez de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'pajem_de_paus' %}">Pajem de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'cavaleiro_de_paus' %}">Cavaleiro de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rainha_de_paus' %}">Rainha de Paus</a>
+                <a class="dropdown-item" href="{% url 'carta_paus' 'rei_de_paus' %}">Rei de Paus</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

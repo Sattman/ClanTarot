@@ -1,0 +1,249 @@
+
+
+body
+{
+  background-color:  #E6E6FA;
+}
+
+
+.ClaTarot
+{
+  margin-left: 0%;
+  width: 9.2%;
+  height: 10%;
+  float: left;
+}
+.primeiro
+{
+  margin-right: 6%;
+}
+
+.CASA_DO_TARÔ
+{
+  color: #000000;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;  
+  background-image: linear-gradient(to right, rgb(255,255,255), rgb(255,255,255), rgb(255,255,255));
+
+}
+
+
+.lista_inicio, .lista_menores, .lista_historia, .lista_maiores,
+ .lista_time, .lista_consulta, .lista_contato
+ {
+  list-style: none;
+   
+}
+
+
+.lista_inicio li a, .lista_menores li a, .lista_historia li a, .lista_maiores li a,
+.lista_time li a, .lista_consulta li a, .lista_contato li a
+
+{
+  text-transform: uppercase;
+  text-decoration: none; /* Remove sublinhado padrão dos links */
+  color: #FFFFFF; 
+  padding:  10px; /* Espaçamento interno do link (ajuste conforme necessário) */
+  font-family: "Times New Roman", Times, serif;  
+ 
+}
+.form, .btn 
+{
+  color: #00FF00; 
+}
+
+.img_museu1, .imgtarot, .coruja
+{
+  
+  float: right;
+  margin-right: 2%;
+  margin-top: 0%;
+  padding: 2%;
+}
+.texto1, .texto2, .texto3, .texto4, .texto5, .texto6, .texto7
+
+{
+  text-align: justify;
+  color: #000000;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin: 3%;
+  text-indent:3%;
+}
+
+.img_museu2, .img_museu3
+{
+  float: left;
+  margin-left: 3%;
+  padding: 2%;
+  margin-left: 1%;
+  
+}
+
+figcaption
+{
+  text-align: center;
+  color: #00008B;
+}
+
+.lista_menu
+{
+  display: flex; /* Exibe os itens em uma linha */
+  list-style: none; /* Remove os marcadores de lista */
+  justify-content: center;
+  margin-right: 5%; 
+ 
+}
+.lista_menu li 
+{
+  text-decoration: none;  
+  
+  font-family: "Times New Roman", Times, serif;  
+  padding: 5px 50px;
+}
+
+.titulo, .as_titulo
+{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  font-weight: bold;
+}
+
+#FOGO
+{
+  color: #8B0000;
+  width: 99px;
+  height: 38px;
+}
+
+#ÁGUA
+{
+  color: #00FFFF;
+  width: 99px;
+  height: 38px;
+}
+
+#AR
+{
+  color: #FFFF00;
+  width: 99px;
+  height: 38px;
+ 
+}
+
+#TERRA
+{
+  color: #00FF7F;
+  width: 99px;
+  height: 38px;
+}
+
+.img_elementos
+{
+  text-align: center;
+}
+
+
+#ArcanosMaiores
+{
+  margin-left: 28%;
+  margin-top: 3.1%;
+  font-family: "Times New Roman", Times, serif;  
+  color: #FFFFFF;
+}
+
+.dropdown-menu a
+{
+  color: #4B0082;
+  font-family: "Times New Roman", Times, serif;  
+}
+
+.as_titulo
+{
+  white-space: pre-line; /* ou white-space: pre-wrap; */
+}
+
+.form
+{
+ text-align: center;
+ color: #000000; 
+ font-weight: bold;
+}
+
+.Enviar
+{
+  color: #FFFFFF;
+}
+
+#TituloContato
+{
+  font-weight: bold;
+}
+
+.malu
+{
+  margin-left: 6%;
+  width: 21.8%;
+  height: 20%;
+  float: left; 
+   
+}
+
+
+
+.Rafael
+{
+  margin-left: 10%;
+  width: 26.5%;  
+  float: left; 
+  object-fit: cover;
+}
+
+.Mile
+{
+  object-fit: cover;
+  float: right;
+  margin-right: 6%;
+  width: 20%;
+
+}
+
+.textoMalu
+{
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  font-weight: bold;
+  text-align: justify;
+  text-indent:3%;
+}
+.instragram
+{
+  width: 55px;
+  height: 55px;
+
+  margin-left: 25px;
+  margin-bottom: 0px;
+}
+
+.agendar1, .agendar3
+{
+  width: 100%;
+}
+
+@media (max-width: 1000px){
+  .imgtarot
+  {
+    margin-right: 22%;
+ 
+  }
+  #ArcanosMaiores
+  {
+    margin-left: 42%;
+  }
+  .ClaTarot
+  {
+    margin-top: 0.3%;
+  }
+}
+

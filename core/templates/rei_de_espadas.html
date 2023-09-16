@@ -1,0 +1,145 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rei de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Rei de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Rei de Espadas: O Monarca da Razão e Justiça 
+            </h4>
+        </div> 
+        
+        <p>
+            <br>  
+        </p>
+
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/ReiEspadas.jpg' %}" alt="Rei de Espadas" class="img-fluid">
+                <figcaption> Rei de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                Dentro do intrincado universo do Tarot, a Corte das Espadas é governada por
+                figuras de poder e sabedoria. E em seu trono, assenta-se o Rei de Espadas, 
+                símbolo máximo do intelecto e da clareza de pensamento. Como o monarca dessa 
+                corte, ele personifica a autoridade, a justiça e a busca incansável pela
+                verdade. Sentado com postura ereta, o Rei de Espadas irradia uma aura de 
+                serenidade e confiança. Sua coroa simboliza a sua sabedoria e experiência,
+                enquanto a espada que segura firmemente em suas mãos representa sua habilidade
+                de cortar pela névoa do desconhecido. Sua face impassível reflete sua
+                imparcialidade e discernimento, evidenciando seu compromisso com a 
+                busca objetiva pela verdade e justiça.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                O naipe de espadas, associado ao elemento ar, representa o poder do pensamento
+                racional e da comunicação clara. Como governante deste naipe, o Rei de Espadas 
+                personifica essas características de forma soberana. Sua capacidade de análise
+                e tomada de decisões precisas é admirável, e sua influência é sentida na 
+                resolução de conflitos e na promoção do entendimento entre as pessoas. Entretanto,
+                assim como todas as cartas do Tarot, o Rei de Espadas não é isento de dualidade.
+                Sua busca inflexível pela verdade pode torná-lo austero e crítico, inclinando-o
+                a ignorar as nuances emocionais das situações. Quando desequilibrado, pode
+                se tornar um líder tirânico, utilizando sua espada de forma impiedosa em
+                nome da justiça, sem considerar a empatia.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Ao cruzar com o Rei de Espadas em uma leitura de Tarot, somos convidados a refletir 
+                sobre nossas próprias atitudes em relação ao poder do intelecto e da razão. Ele 
+                nos desafia a cultivar a clareza mental, a objetividade e a honestidade em nossas
+                decisões e relacionamentos. Ao mesmo tempo, nos alerta para a necessidade de
+                equilibrar essa racionalidade com a compreensão das emoções e a empatia para 
+                com os outros. Esse monarca da razão nos inspira a aprimorar nossas habilidades
+                de comunicação e a enfrentar os desafios da vida com coragem e discernimento.
+                Ele nos lembra que o verdadeiro poder está no uso sábio da mente e da espada,
+                cortando a ilusão e encontrando o caminho da justiça e da verdadeira sabedoria.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/Rei-Espadas.jpg' %}" alt="Rei de Espadas"class="img-fluid" >
+                <figcaption> Rei de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em síntese, o Rei de Espadas é um arcano que nos convida a assumir a 
+                responsabilidade por nossas escolhas e ações, utilizando a razão para guiar
+                nosso caminho. Ele nos ensina que a verdadeira autoridade vem da capacidade
+                de liderar com clareza mental e justiça, ao mesmo tempo que cultiva a empatia
+                e o respeito pelas diferenças, fortalecendo nosso reino interior e o mundo
+                ao nosso redor.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>

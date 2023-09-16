@@ -1,0 +1,141 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quando de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Quatro de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <h4 class="as_titulo">
+                O Quatro de Espadas no Tarot: Descanso, Recuperação e Reflexão
+            </h4>
+        </div> 
+
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1">
+            <figure>
+                <img src="{% static 'img/4Espadas.jpg' %}" alt="Quatro de Espadas" class="img-fluid">
+                <figcaption> Quatro de Espadas</figcaption>
+            </figure>
+        </div>
+
+
+
+        <div>
+            <p class="as_texto1">
+                O Quatro de Espadas é uma carta do Tarot que traz consigo uma energia de descanso,
+                recuperação e reflexão. Representado no baralho de Rider-Waite por uma figura
+                deitada em um altar ou cama, essa carta simboliza a necessidade de pausa para
+                recuperar-se física e mentalmente após momentos de estresse ou desafio. A imagem
+                retrata o Quatro de Espadas em um estado de repouso tranquilo, com quatro 
+                espadas alinhadas acima dele. Essa cena sugere um momento de retiro ou
+                meditação, onde a pessoa pode se recolher para encontrar paz e serenidade
+                interior.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa a importância de reservarmos um tempo para descansar e
+                relaxar, especialmente após períodos de luta ou tensão. O Quatro de Espadas
+                nos encoraja a cuidar de nossa saúde emocional e mental, buscando momentos 
+                de tranquilidade para recuperar nossas energias. Além disso, o Quatro de 
+                Espadas também simboliza a necessidade de reflexão e autoavaliação. É um 
+                momento propício para olharmos para dentro de nós mesmos, avaliar nossas 
+                experiências e aprender com os desafios que enfrentamos. 
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Quatro de Espadas pode indicar um período de pausa ou 
+                descanso necessário. É um momento propício para cuidarmos de nosso bem-estar 
+                físico e emocional, buscando atividades que nos tragam relaxamento e tranquilidade. 
+                Essa carta também pode servir como um lembrete para não nos sobrecarregarmos com
+                responsabilidades ou preocupações. O Quatro de Espadas nos encoraja a reservar
+                tempo para nós mesmos, para refletir sobre nossas vidas e para encontrar
+                equilíbrio entre nossas obrigações e nosso autocuidado.          
+                Por outro lado, o Quatro de Espadas também pode nos alertar para não nos isolarmos
+                em excesso ou nos afastarmos das questões que precisam ser enfrentadas. Ele nos
+                convida a encontrar um equilíbrio saudável entre o recolhimento para o 
+                descanso e a ação para lidar com as situações que requerem nossa atenção.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/4-Espadas.jpg' %}" alt="Quatro de Espadas"class="img-fluid" >
+                <figcaption> Quatro de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Quatro de Espadas no Tarot representa o descanso, a recuperação e a
+                reflexão. É uma carta que nos encoraja a cuidar de nossa saúde física e emocional,
+                buscando momentos de tranquilidade para recuperar nossas energias. Com a disposição
+                de reservar tempo para o autocuidado e a reflexão, podemos encontrar a paz
+                interior e a clareza necessárias para enfrentar os desafios da vida com mais
+                equilíbrio e serenidade.
+            </p>
+        </div>
+
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        {% bootstrap_javascript %}
+    </body>
+</html>

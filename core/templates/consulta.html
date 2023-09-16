@@ -1,0 +1,209 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Agendar Consulta</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/estyle.css' %}">       
+     </head>
+<body>
+
+<header>
+        <div class="ClaTarot">
+            <figure>
+              <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+            </figure>
+        </div>
+        <div class="CASA_DO_TARÔ"> 
+           <h1 class="primeiro">Agendar Consulta</h1>     
+        <ul class="lista_inicio">
+                {% for pagina in paginas %}
+                   <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                {% endfor %}
+            </ul>
+        </div>
+</header>
+        
+       
+   
+
+
+<p>
+    <br>  
+</p>
+
+<h4 class="titulo">
+    Saudações caro consulente, seja bem vindo! <br>
+    Escolha o profissional de sua preferência,
+    todos eles têm relevante competência.
+
+ </h4>
+ <p>
+    <br>  
+</p>
+
+
+<div>
+    <div class="malu">
+          <figcaption>    
+             <h4 class="primeiro">Malu</h4>    
+          </figcaption>   
+                
+        <figure>
+          <img src="{% static 'img/malu.jpg' %}" alt="" class="img-fluid">
+          <figcaption>
+            <button type="button" class=" agendar1 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#example1Modal">
+              Agendar
+            </button>
+            </figcaption>
+          </figure>
+    </div>
+         <!-- Modal -->
+         <div class="modal fade" id="example1Modal" tabindex="-1" aria-labelledby="example1ModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="example1ModalLabel">Malu</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class=" textoMalu modal-body">
+                   Conheça Malu Damaceno, uma apaixonada leitora de baralho 
+                   cigano com anos de experiência. Com profundo conhecimento 
+                   nas cartas e sua simbologia, Malu Damaceno, graduada em 
+                   enfermagem pela UESB, oferece leituras de baralho cigano 
+                   que fornecem insights valiosos sobre o passado, presente 
+                   e futuro. Sua formação e habilidades de comunicação 
+                   aprimoradas trazem uma abordagem única às leituras, 
+                   combinando intuição e conhecimento técnico. Malu 
+                   Damaceno está pronta para guiar você em uma jornada 
+                   espiritual e responder às suas perguntas mais intrigantes 
+                   através das cartas do baralho cigano.           
+                   
+               </div>
+               <div class="modal-footer">
+                   <div >
+                       <figure class="instragram">
+                         <a href="https://www.instagram.com/_maludamaceno/" target="_blank"> <img src="{% static 'img/instagram.jpg' %}" alt="" class="img-fluid"></a>
+                       </figure>
+                   </div>
+                  
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+               </div>
+             </div>
+           </div>
+         </div>
+</div>
+
+
+<div>
+   <div class=" Rafael">
+            <figcaption>   
+                <h4 class="primeiro">Rafael</h4>    
+            </figcaption>   
+            
+   
+      <figure>
+        <img src="{% static 'img/rafa.jpg' %}" alt="" class="rafa img-fluid">
+        <figcaption>
+          <button type="button" class=" agendar1 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#example2Modal">
+            Agendar
+          </button>
+          </figcaption>
+        </figure>
+    </div>
+         <!-- Modal -->
+         <div class="modal fade" id="example2Modal" tabindex="-1" aria-labelledby="example2ModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="example2ModalLabel">Rafael</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class=" textoMalu modal-body">
+                Apresentamos Rafael, um conhecedor do Tarot de Marselha. 
+                Com sua abordagem única e olhar atento às cartas, Rafael 
+                proporciona leituras que desvendam os mistérios do passado, 
+                lançam luz sobre o presente e oferecem vislumbres do futuro. 
+                Deixe-se cativar pela perspicácia das leituras de Rafael e 
+                descubra novas formas de compreender sua jornada através 
+                do Tarot de Marselha.                           
+               </div>
+               <div class="modal-footer">
+                   <div >
+                       <figure class="instragram">
+                         <a href="https://www.instagram.com/el.rafa.sf/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"> <img src="{% static 'img/instagram.jpg' %}" alt="" class="img-fluid"></a>
+                       </figure>
+                   </div>                  
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+               </div>
+             </div>
+           </div>
+         </div>
+</div>
+
+
+<div>     
+      <div class="Mile">
+              
+              
+
+          
+                <figcaption>               
+                    <h4 class="primeiro">Mileide</h4>    
+                </figcaption>    
+            </figure>
+            <img src="{% static 'img/mile.jpg' %}" alt="" class="img-fluid">
+                <figcaption>
+                    <button type="button" class=" agendar1 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#example3Modal">
+                    Agendar
+                    </button>
+                </figcaption> 
+          </figure> 
+      </div> 
+
+         <!-- Modal -->
+         <div class="modal fade" id="example3Modal" tabindex="-1" aria-labelledby="example3ModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="example3ModalLabel">Mileide</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class=" textoMalu modal-body">
+                Descubra o profundo conhecimento e intuição de Mileide, 
+                uma taróloga excepcional que combina as sagradas artes 
+                do Tarot de Marselha e do Baralho Cigano para oferecer 
+                orientação única em suas leituras. Graduada em Letras 
+                pela UESB e talentosa escritora, Mileide traz uma 
+                abordagem única e esclarecedora ao mundo do tarot, 
+                trazendo insights profundos e respostas para iluminar 
+                seu caminho.
+               </div>
+               <div class="modal-footer">
+                   <div >
+                       <figure class="instragram">
+                         <a href="https://www.instagram.com/mileide.nandes/" target="_blank"> <img src="{% static 'img/instagram.jpg' %}" alt="" class="img-fluid"></a>
+                       </figure>
+                   </div>                  
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+               </div>
+             </div>
+           </div>
+         </div>     
+</div>
+
+
+
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+{% bootstrap_javascript  %}
+</div>  
+
+</html>

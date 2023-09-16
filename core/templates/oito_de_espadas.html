@@ -1,0 +1,145 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>     
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Oito de Espadas</title>
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/menores.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <div class="ClaTarot">
+                <figure>
+                  <a href="/"> <img src="{% static 'img/ClaTarot.png' %}" alt="" class="img-fluid"></a>
+                </figure>
+            </div>
+            
+            <div class="CASA_DO_TARÔ"> 
+               <h1  class="primeiro">Oito de Espadas</h1>     
+            <ul class="lista_inicio">
+                    {% for pagina in paginas %}
+                       <button type="button" class="btn btn-secondary" id="botoes"> <li><a href="{% url pagina %}">{{ pagina }}</a></li> </button>
+                    {% endfor %}
+                </ul>
+            </div>
+        </header>
+        <p>
+            <br>  
+        </p>
+        
+
+        <div>
+            <h4 class="as_titulo">
+                O Oito de Espadas no Tarot: Restrição, Autoimposta e Libertação da Prisão Mental
+            </h4>
+        </div> 
+        
+        <p>
+            <br>  
+        </p>
+        
+        <div class="img_as_paus1" id="oito">
+            <figure>
+                <img src="{% static 'img/8Espadas.jpg' %}" alt="Oito de Espadas" class= "img-fluid">
+                <figcaption> Oito de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <p>
+            <br>  
+        </p>
+
+        <div>
+            <p class="as_texto1">
+                O Oito de Espadas é uma carta do Tarot que traz consigo uma energia de restrição, 
+                sensação de estar preso e a necessidade de libertar-se de uma prisão mental
+                autoimposta. Representado no baralho de Rider-Waite por uma figura vendada 
+                e amarrada, cercada por oito espadas, essa carta simboliza a limitação causada
+                por nossos próprios medos, dúvidas e inseguranças. A imagem retrata o Oito de
+                Espadas como uma pessoa aparentemente presa, mas com a opção de caminhar 
+                para fora da área de restrição. Apesar das aparências, as amarras não estão 
+                apertadas, e a venda nos olhos sugere que a sensação de estar preso é mais 
+                psicológica do que física.
+            </p>
+        </div>  
+
+
+        <div>
+            <p class="as_texto2">
+                Essa carta representa o sentimento de impotência que surge quando nos deixamos
+                dominar pelas nossas próprias preocupações e pensamentos negativos. O Oito de
+                Espadas nos alerta para a necessidade de questionar nossas crenças limitantes
+                e de buscar a liberdade de nossa própria prisão mental. Além disso, o Oito 
+                de Espadas também pode simbolizar a falta de clareza ou visão em relação a
+                uma situação. Ele nos encoraja a remover a venda que nos impede de ver a
+                realidade com mais objetividade e a enfrentar nossos medos com coragem.
+            </p>
+        </div>  
+        <div>
+            <p class="as_texto3">
+                Em leituras de Tarot, o Oito de Espadas pode indicar um momento em que nos 
+                sentimos presos por nossos próprios pensamentos e emoções. É um período propício
+                para questionarmos as histórias que contamos a nós mesmos e para desafiar
+                as crenças que nos limitam. Essa carta também pode servir como um lembrete 
+                para buscarmos a liberdade através da mudança de perspectiva. O Oito de 
+                Espadas nos encoraja a encontrar soluções criativas para os problemas que
+                enfrentamos e a nos libertarmos das amarras autoimpostas. Por outro lado,
+                o Oito de Espadas também pode nos alertar para não ignorarmos os desafios
+                ou fugirmos de situações que requerem ação. Ele nos convida a sermos
+                proativos e a enfrentar nossos medos e dúvidas de frente.
+            </p>
+        </div>  
+
+<div class="img_as_paus2">
+            <figure>
+                <img src="{% static 'img/8-Espadas.jpg' %}" alt="Oito de Espadas"class="img-fluid" >
+                <figcaption> Oito de Espadas</figcaption>
+            </figure>
+        </div>
+
+        <div>
+            <p class="as_texto4">
+                Em resumo, o Oito de Espadas no Tarot representa a restrição autoimposta, 
+                a sensação de estar preso e a necessidade de libertar-se da prisão mental. 
+                É uma carta que nos alerta para questionarmos nossas crenças limitantes e
+                para buscarmos a liberdade através da mudança de perspectiva. Com a disposição 
+                de enfrentar nossos medos e inseguranças, podemos encontrar a clareza mental
+                e a liberdade emocional necessárias para seguir em frente com mais confiança
+                e determinação.
+            </p>
+        </div> 
+
+        <div class="dropdown">
+            <button class=" AR btn btn-secondary dropdown-toggle" type="button" id="AR" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                AR
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opções do menu AR -->
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'as_de_espadas' %}">As de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dois_de_espadas' %}">Dois de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'tres_de_espadas' %}">Três de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'quatro_de_espadas' %}">Quatro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cinco_de_espadas' %}">Cinco de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'seis_de_espadas' %}">Seis de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'sete_de_espadas' %}">Sete de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'oito_de_espadas' %}">Oito de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'nove_de_espadas' %}">Nove de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'dez_de_espadas' %}">Dez de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'pajem_de_espadas' %}">Pajem de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'cavaleiro_de_espadas' %}">Cavaleiro de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rainha_de_espadas' %}">Rainha de Espadas</a>
+                <a class="dropdown-item" href="{% url 'carta_espadas' 'rei_de_espadas' %}">Rei de Espadas</a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        
+        {% bootstrap_javascript %}
+    </body>
+</html>
